@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Xcode 7.0">
+    <entity name="Room" representedClassName=".Room" syncable="YES">
+        <attribute name="imageData" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Task" inverseName="room" inverseEntity="Task" syncable="YES"/>
+    </entity>
+    <entity name="Task" representedClassName=".Task" syncable="YES">
+        <attribute name="isBookmarked" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isComplete" attributeType="Boolean" syncable="YES"/>
+        <attribute name="text" attributeType="String" syncable="YES"/>
+        <relationship name="room" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Room" inverseName="tasks" inverseEntity="Room" syncable="YES"/>
+        <relationship name="tips" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Tip" inverseName="task" inverseEntity="Tip" syncable="YES"/>
+    </entity>
+    <entity name="Tip" representedClassName=".Tip" syncable="YES">
+        <attribute name="text" attributeType="String" syncable="YES"/>
+        <relationship name="task" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Task" inverseName="tips" inverseEntity="Task" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Room" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Task" positionX="-54" positionY="9" width="128" height="120"/>
+        <element name="Tip" positionX="-36" positionY="54" width="128" height="75"/>
+    </elements>
+</model>
