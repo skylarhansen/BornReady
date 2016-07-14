@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C0124251D3441EB0059BB7E /* RoomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0124241D3441EB0059BB7E /* RoomCollectionViewCell.swift */; };
 		8C0124281D34440B0059BB7E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C0124261D34440B0059BB7E /* Model.xcdatamodeld */; };
 		8C01243D1D3449870059BB7E /* Tip+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0124371D3449870059BB7E /* Tip+CoreDataProperties.swift */; };
 		8C01243E1D3449870059BB7E /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0124381D3449870059BB7E /* Tip.swift */; };
-		8C01243F1D3449870059BB7E /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0124391D3449870059BB7E /* Task+CoreDataProperties.swift */; };
-		8C0124401D3449870059BB7E /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C01243A1D3449870059BB7E /* Task.swift */; };
 		8C0124441D344B170059BB7E /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0124431D344B170059BB7E /* Stack.swift */; };
 		8C0124471D34502A0059BB7E /* Room+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0124451D34502A0059BB7E /* Room+CoreDataProperties.swift */; };
 		8C0124481D34502A0059BB7E /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0124461D34502A0059BB7E /* Room.swift */; };
 		8C01244A1D3454200059BB7E /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0124491D3454200059BB7E /* TaskController.swift */; };
 		8C0124CE1D35A14C0059BB7E /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0124CD1D35A14C0059BB7E /* TaskTableViewCell.swift */; };
 		8C0124D01D35AD490059BB7E /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0124CF1D35AD490059BB7E /* TaskViewController.swift */; };
+		8C939C331D36F45D002710DB /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C939C311D36F45D002710DB /* Task+CoreDataProperties.swift */; };
+		8C939C341D36F45D002710DB /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C939C321D36F45D002710DB /* Task.swift */; };
 		8CB1C5A61D3059A7006EE550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1C5A51D3059A7006EE550 /* AppDelegate.swift */; };
 		8CB1C5AB1D3059A7006EE550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1C5A91D3059A7006EE550 /* Main.storyboard */; };
 		8CB1C5AD1D3059A7006EE550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1C5AC1D3059A7006EE550 /* Assets.xcassets */; };
 		8CB1C5B01D3059A7006EE550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1C5AE1D3059A7006EE550 /* LaunchScreen.storyboard */; };
 		8CB1C5BB1D3059A7006EE550 /* BornReadyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1C5BA1D3059A7006EE550 /* BornReadyTests.swift */; };
 		8CB1C5C61D3059A8006EE550 /* BornReadyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1C5C51D3059A8006EE550 /* BornReadyUITests.swift */; };
-		8CB1C5D41D305B67006EE550 /* RoomCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1C5D31D305B67006EE550 /* RoomCollectionViewController.swift */; };
+		8CE618881D36AABF002D7E0C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE618871D36AABF002D7E0C /* HomeViewController.swift */; };
+		8CE6188A1D36AAFB002D7E0C /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE618891D36AAFB002D7E0C /* RoomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,18 +46,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8C0124241D3441EB0059BB7E /* RoomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomCollectionViewCell.swift; sourceTree = "<group>"; };
 		8C0124271D34440B0059BB7E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		8C0124371D3449870059BB7E /* Tip+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tip+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8C0124381D3449870059BB7E /* Tip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
-		8C0124391D3449870059BB7E /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		8C01243A1D3449870059BB7E /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		8C0124431D344B170059BB7E /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		8C0124451D34502A0059BB7E /* Room+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Room+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8C0124461D34502A0059BB7E /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		8C0124491D3454200059BB7E /* TaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		8C0124CD1D35A14C0059BB7E /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		8C0124CF1D35AD490059BB7E /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		8C939C311D36F45D002710DB /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8C939C321D36F45D002710DB /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		8CB1C5A21D3059A7006EE550 /* BornReady.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BornReady.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB1C5A51D3059A7006EE550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CB1C5AA1D3059A7006EE550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,7 +69,8 @@
 		8CB1C5C11D3059A7006EE550 /* BornReadyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BornReadyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB1C5C51D3059A8006EE550 /* BornReadyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BornReadyUITests.swift; sourceTree = "<group>"; };
 		8CB1C5C71D3059A8006EE550 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8CB1C5D31D305B67006EE550 /* RoomCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomCollectionViewController.swift; sourceTree = "<group>"; };
+		8CE618871D36AABF002D7E0C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8CE618891D36AAFB002D7E0C /* RoomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +101,10 @@
 		8C0124291D3448FF0059BB7E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8C0124CD1D35A14C0059BB7E /* TaskTableViewCell.swift */,
+				8CE618871D36AABF002D7E0C /* HomeViewController.swift */,
+				8CE618891D36AAFB002D7E0C /* RoomTableViewCell.swift */,
 				8C0124CF1D35AD490059BB7E /* TaskViewController.swift */,
-				8C0124241D3441EB0059BB7E /* RoomCollectionViewCell.swift */,
-				8CB1C5D31D305B67006EE550 /* RoomCollectionViewController.swift */,
+				8C0124CD1D35A14C0059BB7E /* TaskTableViewCell.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -114,8 +114,8 @@
 			children = (
 				8C0124451D34502A0059BB7E /* Room+CoreDataProperties.swift */,
 				8C0124461D34502A0059BB7E /* Room.swift */,
-				8C0124391D3449870059BB7E /* Task+CoreDataProperties.swift */,
-				8C01243A1D3449870059BB7E /* Task.swift */,
+				8C939C311D36F45D002710DB /* Task+CoreDataProperties.swift */,
+				8C939C321D36F45D002710DB /* Task.swift */,
 				8C0124371D3449870059BB7E /* Tip+CoreDataProperties.swift */,
 				8C0124381D3449870059BB7E /* Tip.swift */,
 				8C0124261D34440B0059BB7E /* Model.xcdatamodeld */,
@@ -156,10 +156,10 @@
 			children = (
 				8CB1C5A51D3059A7006EE550 /* AppDelegate.swift */,
 				8C0124431D344B170059BB7E /* Stack.swift */,
-				8CB1C5A91D3059A7006EE550 /* Main.storyboard */,
 				8C01242A1D34490B0059BB7E /* Model */,
 				8C01244B1D3454280059BB7E /* Model Controller */,
 				8C0124291D3448FF0059BB7E /* View Controllers */,
+				8CB1C5A91D3059A7006EE550 /* Main.storyboard */,
 				8CB1C5AC1D3059A7006EE550 /* Assets.xcassets */,
 				8CB1C5AE1D3059A7006EE550 /* LaunchScreen.storyboard */,
 				8CB1C5B11D3059A7006EE550 /* Info.plist */,
@@ -321,14 +321,14 @@
 				8C0124D01D35AD490059BB7E /* TaskViewController.swift in Sources */,
 				8C0124CE1D35A14C0059BB7E /* TaskTableViewCell.swift in Sources */,
 				8C01243E1D3449870059BB7E /* Tip.swift in Sources */,
-				8C0124401D3449870059BB7E /* Task.swift in Sources */,
 				8C0124471D34502A0059BB7E /* Room+CoreDataProperties.swift in Sources */,
 				8C0124481D34502A0059BB7E /* Room.swift in Sources */,
-				8C0124251D3441EB0059BB7E /* RoomCollectionViewCell.swift in Sources */,
-				8C01243F1D3449870059BB7E /* Task+CoreDataProperties.swift in Sources */,
 				8CB1C5A61D3059A7006EE550 /* AppDelegate.swift in Sources */,
-				8CB1C5D41D305B67006EE550 /* RoomCollectionViewController.swift in Sources */,
+				8CE6188A1D36AAFB002D7E0C /* RoomTableViewCell.swift in Sources */,
 				8C0124281D34440B0059BB7E /* Model.xcdatamodeld in Sources */,
+				8C939C331D36F45D002710DB /* Task+CoreDataProperties.swift in Sources */,
+				8CE618881D36AABF002D7E0C /* HomeViewController.swift in Sources */,
+				8C939C341D36F45D002710DB /* Task.swift in Sources */,
 				8C01243D1D3449870059BB7E /* Tip+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

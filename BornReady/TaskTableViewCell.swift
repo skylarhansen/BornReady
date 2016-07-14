@@ -9,13 +9,13 @@
 import UIKit
 
 class TaskTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var taskLabel: UILabel!
+    
     @IBOutlet weak var isCompleteButton: UIButton!
+    @IBOutlet weak var taskLabel: UILabel!
+    @IBOutlet weak var carrotImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        taskLabel.text = "Tim Duncan, Manu Ginobili, Tony Parker, Gregg Popovich, Kawhi Leonard, Danny Green, Lamarcus Aldridge, Pau Gasol, Patty Mills"
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
@@ -24,4 +24,10 @@ class TaskTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    // MARK: - Action buttons
+    
+    @IBAction func isCompleteButtonTapped(sender: AnyObject) {
+    }
+    
 }
+

@@ -2,7 +2,7 @@
 //  Task+CoreDataProperties.swift
 //  BornReady
 //
-//  Created by Skylar Hansen on 7/11/16.
+//  Created by Skylar Hansen on 7/13/16.
 //  Copyright © 2016 Skylar Hansen. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -14,9 +14,10 @@ import CoreData
 
 extension Task {
 
-    @NSManaged var text: String
-    @NSManaged var isComplete: NSNumber
     @NSManaged var isBookmarked: NSNumber
+    @NSManaged var isComplete: NSNumber
+    @NSManaged var text: String
+    @NSManaged var section: String?
     @NSManaged var room: Room?
     @NSManaged var tips: NSOrderedSet?
 
