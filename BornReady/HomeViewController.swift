@@ -17,6 +17,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.translucent = true
         self.navigationController?.view.backgroundColor = UIColor.clearColor()
+        
+        let button: UIButton = UIButton.init(type: .Custom)        //set image for button
+        button.setImage(UIImage(named: "complete"), forState: UIControlState.Normal)
+        //add function for button
+//        button.addTarget(self, action: "fbButtonPressed", forControlEvents: UIControlEvents.TouchUpInside)
+        //set frame
+        button.frame = CGRectMake(0, 0, 24, 24)
+        
+        let barButton = UIBarButtonItem(customView: button)
+        //assign button to navigationbar
+        self.navigationItem.rightBarButtonItem = barButton
     }
 
     override func didReceiveMemoryWarning() {
