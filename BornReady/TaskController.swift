@@ -12,6 +12,10 @@ class TaskController {
     
     static let sharedController = TaskController()
     
+//    let filePath = "/Users/skylarhansen/Documents/DevMountain/CodeBank/Unit6/BornReadyJSON/BornReady.json"
+//    
+//    guard let data = NSData(contentsOfFile: filePath)
+    
     func isCompleteValueToggled(task: Task) {
         task.isComplete = !task.isComplete.boolValue
         saveContext()

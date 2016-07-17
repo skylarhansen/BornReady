@@ -9,18 +9,21 @@
 import UIKit
 import CoreData
 
-
 class Room: NSManagedObject {
     
     static let kType = "Room"
+    private let kName = "name"
+    private let kImage = "image"
     
-    convenience init(name: String, imageData: NSData, context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
+    convenience init(dictionary: [String:AnyObject], name: String, imageData: NSData, context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
         
         guard let entity = NSEntityDescription.entityForName(Room.kType, inManagedObjectContext: context) else { fatalError("Error: Core Data failed to create entity from entity description.") }
         
         self.init(entity: entity, insertIntoManagedObjectContext: context)
         
-        self.name = name
+        if let name = dictionary[kName] as? String {
+            self.name = name
+        }
         self.imageData = imageData
     }
     
@@ -30,5 +33,7 @@ class Room: NSManagedObject {
         
         return UIImage(data: imageData)
     }
-    
 }
+
+
+// how to initialize json stuff and core data stuff, specifically with imageData: NSData vs image: String
