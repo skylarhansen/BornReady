@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import CoreData
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
+    var rooms: [Room]? {
+        let fetchRequest = NSFetchRequest(entityName: "Room")
+        return try! Stack.sharedStack.managedObjectContext.executeFetchRequest(fetchRequest) as? [Room]
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        TaskController.sharedController.serializeJSON { (success) in
+            
+        }
+        
+        print(rooms)
+        
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.translucent = true
@@ -21,7 +33,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let button: UIButton = UIButton.init(type: .Custom)        //set image for button
         button.setImage(UIImage(named: "complete"), forState: UIControlState.Normal)
         //add function for button
-//        button.addTarget(self, action: "fbButtonPressed", forControlEvents: UIControlEvents.TouchUpInside)
+        //        button.addTarget(self, action: "fbButtonPressed", forControlEvents: UIControlEvents.TouchUpInside)
         //set frame
         button.frame = CGRectMake(0, 0, 24, 24)
         
@@ -29,7 +41,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         //assign button to navigationbar
         self.navigationItem.rightBarButtonItem = barButton
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -45,17 +57,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCellWithIdentifier("roomCell") as? RoomTableViewCell ?? RoomTableViewCell()
         return cell
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 
 

@@ -131,12 +131,12 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		8C01244B1D3454280059BB7E /* Model Controller */ = {
+		8C01244B1D3454280059BB7E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				8C0124491D3454200059BB7E /* TaskController.swift */,
 			);
-			name = "Model Controller";
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		8CB1C5991D3059A7006EE550 = {
@@ -166,7 +166,7 @@
 				8C0124431D344B170059BB7E /* Stack.swift */,
 				8C7620911D3ABA8D00FEDD3A /* BornReady.json */,
 				8C01242A1D34490B0059BB7E /* Model */,
-				8C01244B1D3454280059BB7E /* Model Controller */,
+				8C01244B1D3454280059BB7E /* Controllers */,
 				8C0124291D3448FF0059BB7E /* View Controllers */,
 				8CB1C5A91D3059A7006EE550 /* Main.storyboard */,
 				8CB1C5AC1D3059A7006EE550 /* Assets.xcassets */,

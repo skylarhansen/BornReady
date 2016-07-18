@@ -12,32 +12,34 @@ import CoreData
 class Room: NSManagedObject {
     
     static let kType = "Room"
-    private let kName = "name"
-    private let kImage = "image"
+    private static let kName = "name"
+    private static let kImage = "image"
     
-    convenience init(name: String, imageData: NSData, context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
-        
+    // Back-up init in case unable to make object from JSON
+    convenience init(name: String, imageString: String, context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
         guard let entity = NSEntityDescription.entityForName(Room.kType, inManagedObjectContext: context) else { fatalError("Error: Core Data failed to create entity from entity description.") }
         
         self.init(entity: entity, insertIntoManagedObjectContext: context)
         
         self.name = name
-        self.imageData = imageData
+        self.imageString = imageString
     }
     
-    init?(dictionary: [String:AnyObject]) {
-        guard let name = dictionary[kName] as? String,
-            image = dictionary[kImage] as? String else { return nil }
+    // JSON init
+    convenience init?(dictionary: [String:AnyObject], context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
+        guard let entity = NSEntityDescription.entityForName(Room.kType, inManagedObjectContext: context),
+            name = dictionary[Room.kName] as? String,
+            image = dictionary[Room.kImage] as? String  else { fatalError("Error: Core Data failed to create entity from entity description.") }
+        
+        self.init(entity: entity, insertIntoManagedObjectContext: context)
         
         self.name = name
-        self.image
-    }
-    
-    var photo: UIImage? {
+        self.imageString = image
+        guard let taskDictionaries = (dictionary["tasks"] as? [[String:AnyObject]]) else { return nil }
+        let tasks = taskDictionaries.flatMap { Task(dictionary: $0) }
+        self.tasks = NSOrderedSet(array: tasks)
+//        tasks.flatMap {  print($0.text) }
         
-        guard let imageData = self.imageData else { return nil }
-        
-        return UIImage(data: imageData)
     }
 }
 
