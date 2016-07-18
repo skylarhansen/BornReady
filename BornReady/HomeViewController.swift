@@ -11,19 +11,21 @@ import CoreData
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var rooms: [Room]? {
-        let fetchRequest = NSFetchRequest(entityName: "Room")
-        return try! Stack.sharedStack.managedObjectContext.executeFetchRequest(fetchRequest) as? [Room]
-    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TaskController.sharedController.serializeJSON { (success) in
-            
-        }
+//        TaskController.sharedController.serializeJSON { (success) in
+//            
+//        }
         
-        print(rooms)
+//        guard let rooms = TaskController.sharedController.rooms,
+//            let tasks = rooms[0].tasks,
+//            let task = tasks[0] as? Task,
+//            let tips = task.tips,
+//            let tip = tips[0] as? Tip else { return }
+        
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -50,7 +52,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - UITableViewDataSource Functions
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        
+        guard let rooms = TaskController.sharedController.rooms else { return 0 }
+        
+        return rooms.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

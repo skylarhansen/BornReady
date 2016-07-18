@@ -7,10 +7,16 @@
 //
 
 import Foundation
+import CoreData
 
 class TaskController {
     
     static let sharedController = TaskController()
+    
+    var rooms: [Room]? {
+        let fetchRequest = NSFetchRequest(entityName: "Room")
+        return try? Stack.sharedStack.managedObjectContext.executeFetchRequest(fetchRequest) as? [Room] ?? []
+    }
     
     func serializeJSON(completion: (success: Bool) -> Void) {
         let filePath = "/Users/skylarhansen/Documents/DevMountain/CodeBank/Unit6/BornReadyJSON/BornReady.json"
@@ -24,7 +30,7 @@ class TaskController {
         _ = roomsArray.flatMap { Room(dictionary: $0) }
         completion(success: true)
         
-        saveContext()
+//        saveContext()
         
         
     }
