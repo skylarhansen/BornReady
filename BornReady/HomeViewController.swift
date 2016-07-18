@@ -11,20 +11,20 @@ import CoreData
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        TaskController.sharedController.serializeJSON { (success) in
-//            
-//        }
+        TaskController.sharedController.serializeJSON { (success) in
+            
+        }
         
-//        guard let rooms = TaskController.sharedController.rooms,
-//            let tasks = rooms[0].tasks,
-//            let task = tasks[0] as? Task,
-//            let tips = task.tips,
-//            let tip = tips[0] as? Tip else { return }
+        guard let rooms = TaskController.sharedController.rooms,
+            let tasks = rooms[0].tasks,
+            let task = tasks[0] as? Task,
+            let tips = task.tips,
+            let _ = tips[0] as? Tip else { return }
+        
+        
         
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
@@ -59,8 +59,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("roomCell") as? RoomTableViewCell ?? RoomTableViewCell()
-        return cell
+        if let cell = tableView.dequeueReusableCellWithIdentifier("roomCell") as? RoomTableViewCell,
+            let rooms = TaskController.sharedController.rooms {
+            let room = rooms[indexPath.row]
+            cell.updateWith(room)
+            return cell
+        } else {
+            return RoomTableViewCell()
+        }
+        
     }
     
     /*

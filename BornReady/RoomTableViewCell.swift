@@ -23,5 +23,10 @@ class RoomTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func updateWith(room: Room) {
+        self.roomImageView.image = UIImage(named: room.imageString)
+        self.roomLabel.text = room.name
+    }
 
 }
