@@ -13,8 +13,12 @@ class TaskController {
     
     static let sharedController = TaskController()
     
+    var room: Room?
+    
     var rooms: [Room]? {
         let fetchRequest = NSFetchRequest(entityName: "Room")
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
         return try? Stack.sharedStack.managedObjectContext.executeFetchRequest(fetchRequest) as? [Room] ?? []
     }
     
@@ -29,12 +33,7 @@ class TaskController {
         
         _ = roomsArray.flatMap { Room(dictionary: $0) }
         completion(success: true)
-        
-//        saveContext()
-        
-        
     }
-    
     
     func isCompleteValueToggled(task: Task) {
         task.isComplete = !task.isComplete.boolValue

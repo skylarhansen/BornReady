@@ -18,14 +18,11 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         }
         
-        guard let rooms = TaskController.sharedController.rooms,
-            let tasks = rooms[0].tasks,
-            let task = tasks[0] as? Task,
-            let tips = task.tips,
-            let _ = tips[0] as? Tip else { return }
-        
-        
-        
+//        guard let rooms = TaskController.sharedController.rooms,
+//            let tasks = rooms[0].tasks,
+//            let task = tasks[0] as? Task,
+//            let tips = task.tips,
+//            let _ = tips[0] as? Tip else { return }
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -34,9 +31,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let button: UIButton = UIButton.init(type: .Custom)        //set image for button
         button.setImage(UIImage(named: "complete"), forState: UIControlState.Normal)
-        //add function for button
-        //        button.addTarget(self, action: "fbButtonPressed", forControlEvents: UIControlEvents.TouchUpInside)
-        //set frame
         button.frame = CGRectMake(0, 0, 24, 24)
         
         let barButton = UIBarButtonItem(customView: button)
