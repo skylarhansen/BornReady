@@ -15,16 +15,22 @@ class Room: NSManagedObject {
     private let kName = "name"
     private let kImage = "image"
     
-    convenience init(dictionary: [String:AnyObject], name: String, imageData: NSData, context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
+    convenience init(name: String, imageData: NSData, context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
         
         guard let entity = NSEntityDescription.entityForName(Room.kType, inManagedObjectContext: context) else { fatalError("Error: Core Data failed to create entity from entity description.") }
         
         self.init(entity: entity, insertIntoManagedObjectContext: context)
         
-        if let name = dictionary[kName] as? String {
-            self.name = name
-        }
+        self.name = name
         self.imageData = imageData
+    }
+    
+    init?(dictionary: [String:AnyObject]) {
+        guard let name = dictionary[kName] as? String,
+            image = dictionary[kImage] as? String else { return nil }
+        
+        self.name = name
+        self.image
     }
     
     var photo: UIImage? {
