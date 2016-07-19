@@ -11,6 +11,8 @@ import CoreData
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var roomListTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,11 +20,23 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             
         }
         
-//        guard let rooms = TaskController.sharedController.rooms,
-//            let tasks = rooms[0].tasks,
-//            let task = tasks[0] as? Task,
-//            let tips = task.tips,
-//            let _ = tips[0] as? Tip else { return }
+        var sectionsArray: [String] = []
+        
+        guard let tasks = TaskController.sharedController.rooms[0].tasks,
+            let task = tasks[0] as? Task,
+            let tips = task.tips,
+            let _ = tips[0] as? Tip else { return }
+    
+        
+        for task in tasks {
+            guard let task = task as? Task else { return }
+            if sectionsArray.contains(task.section) {
+                
+            } else {
+                sectionsArray.append(task.section)
+            }
+        }
+        
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -34,46 +48,40 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         button.frame = CGRectMake(0, 0, 24, 24)
         
         let barButton = UIBarButtonItem(customView: button)
-        //assign button to navigationbar
         self.navigationItem.rightBarButtonItem = barButton
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: - UITableViewDataSource Functions
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        guard let rooms = TaskController.sharedController.rooms else { return 0 }
-        
-        return rooms.count
+        return TaskController.sharedController.rooms.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCellWithIdentifier("roomCell") as? RoomTableViewCell,
-            let rooms = TaskController.sharedController.rooms {
-            let room = rooms[indexPath.row]
+        if let cell = tableView.dequeueReusableCellWithIdentifier("roomCell") as? RoomTableViewCell {
+            let room = TaskController.sharedController.rooms[indexPath.row]
             cell.updateWith(room)
             return cell
         } else {
             return RoomTableViewCell()
         }
-        
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    // MARK: - Navigation
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toTaskList",
+            let indexPath = roomListTableView.indexPathForSelectedRow {
+            let taskVC = segue.destinationViewController as? TaskViewController
+            let room = TaskController.sharedController.rooms[indexPath.row]
+            taskVC?.room = room
+        }
+    }
 }
 
 

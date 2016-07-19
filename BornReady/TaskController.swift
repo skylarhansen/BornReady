@@ -15,11 +15,18 @@ class TaskController {
     
     var room: Room?
     
-    var rooms: [Room]? {
+    var rooms: [Room] {
         let fetchRequest = NSFetchRequest(entityName: "Room")
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
-        return try? Stack.sharedStack.managedObjectContext.executeFetchRequest(fetchRequest) as? [Room] ?? []
+        return (try? Stack.sharedStack.managedObjectContext.executeFetchRequest(fetchRequest)) as? [Room] ?? []
+    }
+    
+    var tasks: [Task] {
+        let fetchRequest = NSFetchRequest(entityName: "Task")
+        let sortDescriptor = NSSortDescriptor(key: "text", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        return (try? Stack.sharedStack.managedObjectContext.executeFetchRequest(fetchRequest)) as? [Task] ?? []
     }
     
     func serializeJSON(completion: (success: Bool) -> Void) {

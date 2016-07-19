@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bvL-IX-h1t">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bvL-IX-h1t">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -59,7 +59,7 @@
                                         <connections>
                                             <outlet property="roomImageView" destination="e6C-Oe-7e9" id="zFF-eW-zxc"/>
                                             <outlet property="roomLabel" destination="YDn-nG-LQc" id="c2q-kK-dwP"/>
-                                            <segue destination="UMu-3d-Oar" kind="show" id="RYI-gE-bOc"/>
+                                            <segue destination="UMu-3d-Oar" kind="show" identifier="toTaskList" id="RYI-gE-bOc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -84,6 +84,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="HOME GUIDE" id="siP-Ih-N4c"/>
+                    <connections>
+                        <outlet property="roomListTableView" destination="EXr-b8-UKa" id="rl2-nv-EEc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PuI-h7-uhf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -169,6 +172,9 @@
                     <navigationItem key="navigationItem" title="Title" id="G4U-Gb-pUd">
                         <barButtonItem key="leftBarButtonItem" id="V1u-hH-mlV"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="taskListTableView" destination="wwT-yo-dEg" id="E8i-C7-JFP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wEu-L2-ibl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

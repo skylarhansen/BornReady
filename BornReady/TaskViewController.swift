@@ -10,6 +10,12 @@ import UIKit
 
 class TaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var taskListTableView: UITableView!
+    
+    var room: Room?
+    
+    var sectionsArray: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,11 +28,28 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - UITableViewDataSource Functions
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        
+        let tasks = TaskController.sharedController.tasks
+        
+        for task in tasks {
+            if sectionsArray.contains(task.section) {
+                // do nothing
+            } else {
+                sectionsArray.append(task.section)
+            }
+        }
+        return sectionsArray.count
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        
+        for task in TaskController.sharedController.tasks {
+            if task.section
+        }
+        
+
+        
+        return 0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
