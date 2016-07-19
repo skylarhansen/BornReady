@@ -16,10 +16,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TaskController.sharedController.serializeJSON { (success) in
-            
+        TaskController.sharedController.serializeJSON { (rooms) in
+//            print(rooms[0].tasks?.count)
         }
-        
 //        var sectionsArray: [String] = []
         
 //        guard let tasks = TaskController.sharedController.rooms[0].tasks,
@@ -38,10 +37,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 //        }
         
         
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.translucent = true
-        self.navigationController?.view.backgroundColor = UIColor.clearColor()
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.translucent = true
+//        self.navigationController?.view.backgroundColor = UIColor.clearColor()
         
         let button: UIButton = UIButton.init(type: .Custom)        //set image for button
         button.setImage(UIImage(named: "complete"), forState: UIControlState.Normal)
@@ -70,6 +69,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         } else {
             return RoomTableViewCell()
         }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        roomListTableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     // MARK: - Navigation

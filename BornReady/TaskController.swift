@@ -29,7 +29,7 @@ class TaskController {
         return (try? Stack.sharedStack.managedObjectContext.executeFetchRequest(fetchRequest)) as? [Task] ?? []
     }
     
-    func serializeJSON(completion: (success: Bool) -> Void) {
+    func serializeJSON(completion: (rooms: [Room]) -> Void) {
         
         let filePath = NSBundle.mainBundle().pathForResource("BornReady", ofType: "json")!
         
@@ -39,8 +39,8 @@ class TaskController {
             bornReadyDictionary = jsonDictionary["born-ready"],
             roomsArray = bornReadyDictionary["rooms"] as? [[String:AnyObject]] else { return }
         
-        _ = roomsArray.flatMap { Room(dictionary: $0) }
-        completion(success: true)
+        let rooms = roomsArray.flatMap { Room(dictionary: $0) }
+        completion(rooms: rooms)
     }
     
     func isCompleteValueToggled(task: Task) {

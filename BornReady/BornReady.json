@@ -7,11 +7,13 @@
             "tasks" : [
                {
                   "text" : "Secure laundry room door with door locks.",
-                  "section" : "Entryways"
+                  "section" : "Entryways",
+                  "tips" : []
                },
                {
                   "text" : "Secure drawers or cabinets that contain hazardous products with locks.",
-                  "section" : "Storage"
+                  "section" : "Storage",
+                  "tips" : []
                },
                {
                   "text" : "Activate child lock feature on washer's control panel.",
@@ -75,11 +77,13 @@
                },
                {
                   "text" : "Once baby can sit up, remove hanging mobiles from crib.",
-                  "section" : "Crib"
+                  "section" : "Crib",
+                  "tips" : []
                },
                {
                   "text" : "Move crib away from anything that could be used for climbing.",
-                  "section" : "Crib"
+                  "section" : "Crib",
+                  "tips" : []
                },
                {
                   "text" : "Ensure crib is not next to a heater or an area with direct sunlight.",
@@ -107,31 +111,38 @@
             "tasks" : [
                {
                   "text" : "Store tools out of reach and don't allow electrical cords to dangle.",
-                  "section" : "Storage"
+                  "section" : "Storage",
+                  "tips" : []
                },
                {
                   "text" : "Put toxic substances in locked storage.",
-                  "section" : "Storage"
+                  "section" : "Storage",
+                  "tips" : []
                },
                {
                   "text" : "Store buckets upside down to prevent liquid accumulation.",
-                  "section" : "Storage"
+                  "section" : "Storage",
+                  "tips" : []
                },
                {
                   "text" : "Keep recycling and garbage containers closed and locked.",
-                  "section" : "Storage"
+                  "section" : "Storage",
+                  "tips" : []
                },
                {
                   "text" : "Install lock on the door connecting the house to the garage.",
-                  "section" : "Entryways"
+                  "section" : "Entryways",
+                  "tips" : []
                },
                {
                   "text" : "Install lock on any entryways leading to the basement.",
-                  "section" : "Entryways"
+                  "section" : "Entryways",
+                  "tips" : []
                },
                {
                   "text" : "Make sure the garage door has a safety sensor.",
-                  "section" : "Garage Door"
+                  "section" : "Garage Door",
+                  "tips" : []
                }
             ]
          },
@@ -150,7 +161,8 @@
                },
                {
                   "text" : "Ensure medications are out of reach and secured with childproof tops.",
-                  "section" : "Storage"
+                  "section" : "Storage",
+                  "tips" : []
                },
                {
                   "text" : "Secure toilet with toilet locks.",
@@ -172,7 +184,8 @@
                },
                {
                   "text" : "Put non-slip mats in and beside the bathtub.",
-                  "section" : "Bathtub & Shower"
+                  "section" : "Bathtub & Shower",
+                  "tips" : []
                },
                {
                   "text" : "Have a plumber install an anti-scald device for the faucets and shower head.",
@@ -185,11 +198,13 @@
                },
                {
                   "text" : "Reduce water heater settings to 120 degrees Farenheit.",
-                  "section" : "Bathtub & Shower"
+                  "section" : "Bathtub & Shower",
+                  "tips" : []
                },
                {
                   "text" : "Install a stable shower curtain rod.",
-                  "section" : "Bathtub & Shower"
+                  "section" : "Bathtub & Shower",
+                  "tips" : []
                }
             ]
          },
@@ -226,19 +241,23 @@
                },
                {
                   "text" : "Always keep pot handles turned toward wall while cooking.",
-                  "section" : "Stove & Oven"
+                  "section" : "Stove & Oven",
+                  "tips" : []
                },
                {
                   "text" : "Always keep hot food and drinks away from table edge.",
-                  "section" : "Stove & Oven"
+                  "section" : "Stove & Oven",
+                  "tips" : []
                },
                {
                   "text" : "When possible, cook using only back burners.",
-                  "section" : "Stove & Oven"
+                  "section" : "Stove & Oven",
+                  "tips" : []
                },
                {
                   "text" : "Install safety latches on refrigerator and freezer doors.",
-                  "section" : "Refrigerator"
+                  "section" : "Refrigerator",
+                  "tips" : []
                },
                {
                   "text" : "Remove magnets from the refrigerator.",
@@ -251,7 +270,8 @@
                },
                {
                   "text" : "Install a safety cover on the garbage disposal.",
-                  "section" : "Sink"
+                  "section" : "Sink",
+                  "tips" : []
                },
                {
                   "text" : "Do not use placemats or tablecloths.",
@@ -282,51 +302,63 @@
             "tasks" : [
                {
                   "text" : "Install foam bumpers on the fireplace hearth and mantles.",
-                  "section" : "Furniture"
+                  "section" : "Furniture",
+                  "tips" : []
                },
                {
                   "text" : "Secure heavy furniture to walls.",
-                  "section" : "Furniture"
+                  "section" : "Furniture",
+                  "tips" : []
                },
                {
                   "text" : "Secure the television to the wall, or place the television on tall sturdy furniture.",
-                  "section" : "Furniture"
+                  "section" : "Furniture",
+                  "tips" : []
                },
                {
                   "text" : "Remove floor lamps.",
-                  "section" : "Furniture"
+                  "section" : "Furniture",
+                  "tips" : []
                },
                {
                   "text" : "Block access to all floor heaters and radiators.",
-                  "section" : "Furniture"
+                  "section" : "Furniture",
+                  "tips" : []
                },
                {
                   "text" : "Install fireplace screen around fireplace.",
-                  "section" : "Furniture"
+                  "section" : "Furniture",
+                  "tips" : []
                },
                {
                   "text" : "Install bumpers to sharp corners on furniture.",
-                  "section" : "Furniture"
+                  "section" : "Furniture",
+                  "tips" : []
                },
                {
                   "text" : "Move all electric cords behind furniture or under rugs.",
-                  "section" : "Storage"
+                  "section" : "Storage",
+                  "tips" : []
                },
                {
                   "text" : "Latch cupboards, doors, and drawers within baby's reach.",
-                  "section" : "Storage"
+                  "section" : "Storage",
+                  "tips" : []
                },
                {
                   "text" : "Purchase baby-safe doorstops.",
-                  "section" : "Entryways"
+                  "section" : "Entryways",
+                  "tips" : []
                },
                {
                   "text" : "Place baby gates at the top and bottom of every set of stairs.",
-                  "section" : "Entryways"
+                  "section" : "Entryways",
+                  "tips" : []
                },
                {
                   "text" : "Install plexiglass on stair and balcony rail spaces greater than four inches.",
-                  "section" : "Entryways"
+                  "section" : "Entryways",
+                  "tips" : []
                }
             ]
          },
@@ -336,7 +368,8 @@
             "tasks" : [
                {
                   "text" : "Ensure backyard gates latch securely.",
-                  "section" : "Yard"
+                  "section" : "Yard",
+                  "tips" : []
                },
                {
                   "text" : "Make a kid-free zone.",
@@ -367,7 +400,8 @@
                },
                {
                   "text" : "Ensure fertilizers and insecticides are safe during and after application.",
-                  "section" : "Yard"
+                  "section" : "Yard",
+                  "tips" : []
                },
                {
                   "text" : "Store garden hoses out of the sun.",
@@ -380,7 +414,8 @@
                },
                {
                   "text" : "Empty wading pools and store upright after each use.",
-                  "section" : "Pool"
+                  "section" : "Pool",
+                  "tips" : []
                },
                {
                   "text" : "Install a locked fence around permanent pool structures.",
@@ -396,7 +431,8 @@
                },
                {
                   "text" : "Install tall flags on riding toys and ensure riding area is safe.",
-                  "section" : "Toys"
+                  "section" : "Toys",
+                  "tips" : []
                }
             ]
          },
@@ -424,7 +460,8 @@
                },
                {
                   "text" : "Install hardware-mounted safety gates in front of any stairs in the house.",
-                  "section" : "Stairways"
+                  "section" : "Stairways",
+                  "tips" : []
                },
                {
                   "text" : "Install corner and edge bumpers.",
