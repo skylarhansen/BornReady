@@ -16,7 +16,7 @@ class Task: NSManagedObject {
     private static let kText = "text"
     private static let kSection = "section"
     
-    convenience init(text: String, section: String, isComplete: Bool = false, isBookmarked: Bool = false, context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
+    convenience init(text: String, section: String, isComplete: Bool = false, context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
         
         guard let entity = NSEntityDescription.entityForName(Task.kType, inManagedObjectContext: context) else { fatalError("Error: Core Data failed to create entity from entity description.") }
         
@@ -24,8 +24,9 @@ class Task: NSManagedObject {
         
         self.text = text
         self.isComplete = isComplete
-        self.isBookmarked = isBookmarked
         self.section = section
+        self.tips = []
+        self.room = nil
     }
     
     // JSON init
@@ -37,10 +38,12 @@ class Task: NSManagedObject {
         self.init(entity: entity, insertIntoManagedObjectContext: context)
         
         self.text = text
+        self.isComplete = false
         self.section = section
         guard let tipDictionaries = (dictionary["tips"] as? [[String:AnyObject]]) else { return nil }
         let tips = tipDictionaries.flatMap { Tip(dictionary: $0) }
         self.tips = NSOrderedSet(array: tips)
+        self.room = nil
         
 //        tips.flatMap { print($0.text) }
     }

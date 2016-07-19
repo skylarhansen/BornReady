@@ -8,13 +8,22 @@
 
 import UIKit
 
-class TaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TaskTableViewCellDelegate {
     
     @IBOutlet weak var taskListTableView: UITableView!
     
     var room: Room?
     
-    var sectionsArray: [String] = []
+    var sections: [[Task]] {
+        guard let tasks = room?.tasks else { return [] }
+        var taskArray = [Task]()
+        for task in tasks {
+            if let task = task as? Task {
+                taskArray.append(task)
+            }
+        }
+        return TaskController.makeSections(taskArray)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,45 +37,41 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
     // MARK: - UITableViewDataSource Functions
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        
-        let tasks = TaskController.sharedController.tasks
-        
-        for task in tasks {
-            if sectionsArray.contains(task.section) {
-                // do nothing
-            } else {
-                sectionsArray.append(task.section)
-            }
-        }
-        return sectionsArray.count
+        return sections.count
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        for task in TaskController.sharedController.tasks {
-            if task.section
-        }
-        
-
-        
-        return 0
+        return sections[section].count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("taskCell") as? TaskTableViewCell ?? TaskTableViewCell()
+        let task = sections[indexPath.section][indexPath.row]
+        cell.updateWith(task)
+        cell.delegate = self
         return cell
-        
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if let sectionName = sections[section].first?.section {
+            return sectionName
+        } else {
+            return nil
+        }
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 35
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func taskCellIsCompleteButtonTapped(sender: TaskTableViewCell) {
+        guard let indexPath = taskListTableView.indexPathForCell(sender) else {
+            return
+        }
+        let task = sections[indexPath.section][indexPath.row]
+        TaskController.sharedController.isCompleteValueToggled(task)
+        taskListTableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
     }
-    
     
     /*
      // MARK: - Navigation

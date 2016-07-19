@@ -14,7 +14,6 @@ import CoreData
 
 extension Task {
 
-    @NSManaged var isBookmarked: NSNumber
     @NSManaged var isComplete: NSNumber
     @NSManaged var section: String
     @NSManaged var text: String

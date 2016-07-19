@@ -23,6 +23,7 @@ class Room: NSManagedObject {
         
         self.name = name
         self.imageString = imageString
+        self.tasks = []
     }
     
     // JSON init
@@ -38,8 +39,6 @@ class Room: NSManagedObject {
         guard let taskDictionaries = (dictionary["tasks"] as? [[String:AnyObject]]) else { return nil }
         let tasks = taskDictionaries.flatMap { Task(dictionary: $0) }
         self.tasks = NSOrderedSet(array: tasks)
-//        tasks.flatMap {  print($0.text) }
-        
     }
 }
 

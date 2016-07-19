@@ -159,6 +159,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="UMu-3d-Oar" id="hPb-CU-N56"/>
+                                    <outlet property="delegate" destination="UMu-3d-Oar" id="haQ-fU-uGN"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.99607843137254903" green="0.88627450980392153" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>

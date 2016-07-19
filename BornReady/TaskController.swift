@@ -30,13 +30,14 @@ class TaskController {
     }
     
     func serializeJSON(completion: (success: Bool) -> Void) {
-        let filePath = "/Users/skylarhansen/Documents/DevMountain/CodeBank/Unit6/BornReadyJSON/BornReady.json"
+        
+        let filePath = NSBundle.mainBundle().pathForResource("BornReady", ofType: "json")!
         
         guard let data = NSData(contentsOfFile: filePath),
             serializedData = try? NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments),
             jsonDictionary = serializedData as? [String:AnyObject],
             bornReadyDictionary = jsonDictionary["born-ready"],
-            roomsArray = bornReadyDictionary["rooms"] as? [[String:AnyObject]] else { fatalError() }
+            roomsArray = bornReadyDictionary["rooms"] as? [[String:AnyObject]] else { return }
         
         _ = roomsArray.flatMap { Room(dictionary: $0) }
         completion(success: true)
@@ -54,5 +55,20 @@ class TaskController {
         } catch {
             print("Unable to save to persistent store. Error: \(error)")
         }
+    }
+    
+    static func makeSections(tasks: [Task]) -> [[Task]] {
+        var sectionNames = [String]()
+        var sections = [[Task]]()
+        for task in tasks {
+            if sectionNames.contains(task.section) == false {
+                sectionNames.append(task.section)
+            }
+        }
+        for sectionName in sectionNames {
+            let sectionArray = tasks.filter { $0.section == sectionName }
+            sections.append(sectionArray)
+        }
+        return sections
     }
 }

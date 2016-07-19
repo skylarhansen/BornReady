@@ -10,6 +10,8 @@ import UIKit
 
 class TaskTableViewCell: UITableViewCell {
     
+    var delegate: TaskTableViewCellDelegate?
+    
     @IBOutlet weak var isCompleteButton: UIButton!
     @IBOutlet weak var taskLabel: UILabel!
     @IBOutlet weak var carrotImageView: UIImageView!
@@ -23,11 +25,32 @@ class TaskTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func updateIsCompleteButton(isComplete: Bool) {
+        if isComplete {
+            isCompleteButton.setImage(UIImage(named: "complete"), forState: .Normal)
+        } else {
+            isCompleteButton.setImage(UIImage(named: "incomplete"), forState: .Normal)
+        }
+    }
 
     // MARK: - Action buttons
     
     @IBAction func isCompleteButtonTapped(sender: AnyObject) {
+        delegate?.taskCellIsCompleteButtonTapped(self)
     }
     
+}
+
+protocol TaskTableViewCellDelegate {
+    func taskCellIsCompleteButtonTapped(sender: TaskTableViewCell)
+}
+
+extension TaskTableViewCell {
+    func updateWith(task: Task) {
+        taskLabel.text = task.text
+        updateIsCompleteButton(task.isComplete.boolValue)
+        carrotImageView.image = UIImage(named: "arrow")
+    }
 }
 
