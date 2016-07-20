@@ -23,25 +23,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             })
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstRun")
         }
-        
-//        var sectionsArray: [String] = []
-        
-//        guard let tasks = TaskController.sharedController.rooms[0].tasks,
-//            let task = tasks[0] as? Task,
-//            let tips = task.tips,
-//            let _ = tips[0] as? Tip else { return }
-        
+    
 //        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
 //        self.navigationController?.navigationBar.shadowImage = UIImage()
 //        self.navigationController?.navigationBar.translucent = true
 //        self.navigationController?.view.backgroundColor = UIColor.clearColor()
         
-        let button: UIButton = UIButton.init(type: .Custom)        //set image for button
-        button.setImage(UIImage(named: "complete"), forState: UIControlState.Normal)
-        button.frame = CGRectMake(0, 0, 24, 24)
-        
-        let barButton = UIBarButtonItem(customView: button)
-        self.navigationItem.rightBarButtonItem = barButton
     }
     
     override func didReceiveMemoryWarning() {

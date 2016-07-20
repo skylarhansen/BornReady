@@ -30,7 +30,7 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
         sectionLabel.text = task?.section
         sectionLabel.font = UIFont(name: "Aller-Regular", size: 20)
         taskLabel.text = task?.text
-        taskLabel.font = UIFont(name: "Aller-Regular", size: 20)
+        taskLabel.font = UIFont(name: "Aller-Regular", size: 16)
     }
     
     func setUpIsCompleteButtonImage() {
