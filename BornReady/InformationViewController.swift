@@ -23,11 +23,32 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         
         setUpLabelOutlets()
+        setUpIsCompleteButtonImage()
     }
     
     func setUpLabelOutlets() {
         sectionLabel.text = task?.section
         taskLabel.text = task?.text
+    }
+    
+    func setUpIsCompleteButtonImage() {
+        
+        if task?.isComplete.boolValue == true {
+            isCompleteButton.setImage(UIImage(named: "complete"), forState: .Normal)
+        } else {
+            isCompleteButton.setImage(UIImage(named: "incomplete"), forState: .Normal)
+        }
+    }
+    
+    // MARK: - Action Button
+    
+    @IBAction func isCompleteButtonTapped(sender: AnyObject) {
+        
+        guard let task = task else { return }
+        
+        TaskController.sharedController.isCompleteValueToggled(task)
+        setUpIsCompleteButtonImage()
+        
     }
     
     // MARK: - UITableViewDataSource Functions

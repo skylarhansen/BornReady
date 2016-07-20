@@ -19,7 +19,6 @@
 		8C939C331D36F45D002710DB /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C939C311D36F45D002710DB /* Task+CoreDataProperties.swift */; };
 		8C939C341D36F45D002710DB /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C939C321D36F45D002710DB /* Task.swift */; };
 		8CA131F01D374E9400DB18B4 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA131EF1D374E9400DB18B4 /* InformationViewController.swift */; };
-		8CA131F21D374EE400DB18B4 /* TipTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA131F11D374EE400DB18B4 /* TipTableViewCell.swift */; };
 		8CA3837F1D3EEAA6006EC8D7 /* BornReady.json in Resources */ = {isa = PBXBuildFile; fileRef = 8CA3837E1D3EEAA6006EC8D7 /* BornReady.json */; };
 		8CB1C5A61D3059A7006EE550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1C5A51D3059A7006EE550 /* AppDelegate.swift */; };
 		8CB1C5AB1D3059A7006EE550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1C5A91D3059A7006EE550 /* Main.storyboard */; };
@@ -61,7 +60,6 @@
 		8C939C311D36F45D002710DB /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8C939C321D36F45D002710DB /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		8CA131EF1D374E9400DB18B4 /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
-		8CA131F11D374EE400DB18B4 /* TipTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipTableViewCell.swift; sourceTree = "<group>"; };
 		8CA3837E1D3EEAA6006EC8D7 /* BornReady.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BornReady.json; sourceTree = "<group>"; };
 		8CB1C5A21D3059A7006EE550 /* BornReady.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BornReady.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB1C5A51D3059A7006EE550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 				8C0124CF1D35AD490059BB7E /* TaskViewController.swift */,
 				8C0124CD1D35A14C0059BB7E /* TaskTableViewCell.swift */,
 				8CA131EF1D374E9400DB18B4 /* InformationViewController.swift */,
-				8CA131F11D374EE400DB18B4 /* TipTableViewCell.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -328,7 +325,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C01244A1D3454200059BB7E /* TaskController.swift in Sources */,
-				8CA131F21D374EE400DB18B4 /* TipTableViewCell.swift in Sources */,
 				8C0124441D344B170059BB7E /* Stack.swift in Sources */,
 				8C0124D01D35AD490059BB7E /* TaskViewController.swift in Sources */,
 				8C0124CE1D35A14C0059BB7E /* TaskTableViewCell.swift in Sources */,
