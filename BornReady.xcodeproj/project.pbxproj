@@ -16,6 +16,12 @@
 		8C01244A1D3454200059BB7E /* TaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0124491D3454200059BB7E /* TaskController.swift */; };
 		8C0124CE1D35A14C0059BB7E /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0124CD1D35A14C0059BB7E /* TaskTableViewCell.swift */; };
 		8C0124D01D35AD490059BB7E /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0124CF1D35AD490059BB7E /* TaskViewController.swift */; };
+		8C068AF11D401E0A008E4929 /* Aller_Std_BdIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C068AEB1D401E0A008E4929 /* Aller_Std_BdIt.ttf */; };
+		8C068AF21D401E0A008E4929 /* Aller_Std_It.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C068AEC1D401E0A008E4929 /* Aller_Std_It.ttf */; };
+		8C068AF31D401E0A008E4929 /* Aller_Std_Lt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C068AED1D401E0A008E4929 /* Aller_Std_Lt.ttf */; };
+		8C068AF41D401E0A008E4929 /* Aller_Std_LtIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C068AEE1D401E0A008E4929 /* Aller_Std_LtIt.ttf */; };
+		8C068AF51D401E0A008E4929 /* Aller_Std_Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C068AEF1D401E0A008E4929 /* Aller_Std_Rg.ttf */; };
+		8C068AF61D401E0A008E4929 /* Aller_Std.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C068AF01D401E0A008E4929 /* Aller_Std.ttf */; };
 		8C939C331D36F45D002710DB /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C939C311D36F45D002710DB /* Task+CoreDataProperties.swift */; };
 		8C939C341D36F45D002710DB /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C939C321D36F45D002710DB /* Task.swift */; };
 		8CA131F01D374E9400DB18B4 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA131EF1D374E9400DB18B4 /* InformationViewController.swift */; };
@@ -57,6 +63,12 @@
 		8C0124491D3454200059BB7E /* TaskController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskController.swift; sourceTree = "<group>"; };
 		8C0124CD1D35A14C0059BB7E /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		8C0124CF1D35AD490059BB7E /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		8C068AEB1D401E0A008E4929 /* Aller_Std_BdIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aller_Std_BdIt.ttf; sourceTree = "<group>"; };
+		8C068AEC1D401E0A008E4929 /* Aller_Std_It.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aller_Std_It.ttf; sourceTree = "<group>"; };
+		8C068AED1D401E0A008E4929 /* Aller_Std_Lt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aller_Std_Lt.ttf; sourceTree = "<group>"; };
+		8C068AEE1D401E0A008E4929 /* Aller_Std_LtIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aller_Std_LtIt.ttf; sourceTree = "<group>"; };
+		8C068AEF1D401E0A008E4929 /* Aller_Std_Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aller_Std_Rg.ttf; sourceTree = "<group>"; };
+		8C068AF01D401E0A008E4929 /* Aller_Std.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aller_Std.ttf; sourceTree = "<group>"; };
 		8C939C311D36F45D002710DB /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8C939C321D36F45D002710DB /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		8CA131EF1D374E9400DB18B4 /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +148,20 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		8C068AF71D401E17008E4929 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8C068AEB1D401E0A008E4929 /* Aller_Std_BdIt.ttf */,
+				8C068AEC1D401E0A008E4929 /* Aller_Std_It.ttf */,
+				8C068AED1D401E0A008E4929 /* Aller_Std_Lt.ttf */,
+				8C068AEE1D401E0A008E4929 /* Aller_Std_LtIt.ttf */,
+				8C068AEF1D401E0A008E4929 /* Aller_Std_Rg.ttf */,
+				8C068AF01D401E0A008E4929 /* Aller_Std.ttf */,
+			);
+			name = Resources;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		8CB1C5991D3059A7006EE550 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +188,7 @@
 				8CB1C5A51D3059A7006EE550 /* AppDelegate.swift */,
 				8C0124431D344B170059BB7E /* Stack.swift */,
 				8CA3837E1D3EEAA6006EC8D7 /* BornReady.json */,
+				8C068AF71D401E17008E4929 /* Resources */,
 				8C01242A1D34490B0059BB7E /* Model */,
 				8C01244B1D3454280059BB7E /* Controllers */,
 				8C0124291D3448FF0059BB7E /* View Controllers */,
@@ -297,8 +324,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CA3837F1D3EEAA6006EC8D7 /* BornReady.json in Resources */,
+				8C068AF31D401E0A008E4929 /* Aller_Std_Lt.ttf in Resources */,
 				8CB1C5B01D3059A7006EE550 /* LaunchScreen.storyboard in Resources */,
 				8CB1C5AD1D3059A7006EE550 /* Assets.xcassets in Resources */,
+				8C068AF41D401E0A008E4929 /* Aller_Std_LtIt.ttf in Resources */,
+				8C068AF11D401E0A008E4929 /* Aller_Std_BdIt.ttf in Resources */,
+				8C068AF21D401E0A008E4929 /* Aller_Std_It.ttf in Resources */,
+				8C068AF61D401E0A008E4929 /* Aller_Std.ttf in Resources */,
+				8C068AF51D401E0A008E4929 /* Aller_Std_Rg.ttf in Resources */,
 				8CB1C5AB1D3059A7006EE550 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

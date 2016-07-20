@@ -49,6 +49,7 @@ protocol TaskTableViewCellDelegate {
 extension TaskTableViewCell {
     func updateWith(task: Task) {
         taskLabel.text = task.text
+        taskLabel.font = UIFont(name: "Aller-Regular", size: 16)
         updateIsCompleteButton(task.isComplete.boolValue)
         carrotImageView.image = UIImage(named: "arrow")
     }

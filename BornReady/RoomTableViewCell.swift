@@ -25,8 +25,9 @@ class RoomTableViewCell: UITableViewCell {
     }
     
     func updateWith(room: Room) {
-        self.roomImageView.image = UIImage(named: room.imageString)
-        self.roomLabel.text = room.name
+        roomImageView.image = UIImage(named: room.imageString)
+        roomLabel.text = room.name
+        roomLabel.font = UIFont(name: "Aller-Regular", size: 24)
     }
 
 }
