@@ -26,9 +26,11 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
         setUpIsCompleteButtonImage()
     }
     
+    // functions to update outlets
+    
     func setUpLabelOutlets() {
         sectionLabel.text = task?.section.uppercaseString
-        sectionLabel.font = UIFont(name: "Aller-Regular", size: 20)
+        sectionLabel.font = UIFont(name: "Aller-Regular", size: 18)
         taskLabel.text = task?.text
         taskLabel.font = UIFont(name: "Aller-Regular", size: 16)
     }
@@ -69,7 +71,13 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
             let tip = tips[indexPath.row] as? Tip else { return UITableViewCell() }
         
         cell.textLabel?.text = tip.text
+        cell.textLabel?.font = UIFont(name: "Aller-Regular", size: 16)
+        
         return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 90
     }
     
 }
