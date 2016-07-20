@@ -7,17 +7,17 @@
             "tasks" : [
                {
                   "text" : "Secure laundry room door with door locks.",
-                  "section" : "ENTRYWAYS",
+                  "section" : "Entryways",
                   "tips" : []
                },
                {
                   "text" : "Secure drawers or cabinets that contain hazardous products with locks.",
-                  "section" : "STORAGE",
+                  "section" : "Storage",
                   "tips" : []
                },
                {
                   "text" : "Activate child lock feature on washer's control panel.",
-                  "section" : "WASHER & DRYER",
+                  "section" : "Washer & Dryer",
                   "tips" : [
                      {
                         "text" : "This prevents the door from opening mid-cycle."
@@ -26,7 +26,7 @@
                }, 
                {
                   "text" : "Limit space on the sides of the washer and dryer.",
-                  "section" : "WASHER & DRYER",
+                  "section" : "Washer & Dryer",
                   "tips" : [
                      {
                         "text" : "This prevents your child from crawling behind the machines."
@@ -41,7 +41,7 @@
             "tasks" : [
                {
                   "text" : "Purchase a crib with fixed sides, narrow slats, and no corner posts. If using a glider, purchase one with a stop-lock mechanism.",
-                  "section" : "CRIB",
+                  "section" : "Crib",
                   "tips" : [
                      {
                         "text" : "Drop-sided cribs pose a threat to infants, many of whom have been injured or killed as a result of hardware malfunctions common to the crib's design."
@@ -59,7 +59,7 @@
                }, 
                {
                   "text" : "Ensure the crib mattress is firm and well-fitting.",
-                  "section" : "CRIB",
+                  "section" : "Crib",
                   "tips" : [
                      {
                         "text" : "There should be no more than two fingers of space between the side of the mattress and the crib frame; any larger and your baby may become entrapped between the two, resulting in injury or suffocation."
@@ -68,7 +68,7 @@
                },
                {
                   "text" : "Remove soft toys and bedding from crib. Leave only a thin mattress and fitted sheet.",
-                  "section" : "CRIB",
+                  "section" : "Crib",
                   "tips" : [
                      {
                         "text" : "Blankets, pillows, and bumpers of any kind pose a risk of suffocation and or entrapment and should never be used in a crib."
@@ -77,17 +77,17 @@
                },
                {
                   "text" : "Once baby can sit up, remove hanging mobiles from crib.",
-                  "section" : "CRIB",
+                  "section" : "Crib",
                   "tips" : []
                },
                {
                   "text" : "Move crib away from anything that could be used for climbing.",
-                  "section" : "CRIB",
+                  "section" : "Crib",
                   "tips" : []
                },
                {
                   "text" : "Ensure crib is not next to a heater or an area with direct sunlight.",
-                  "section" : "CRIB",
+                  "section" : "Crib",
                   "tips" : [
                      {
                         "text" : "Both are risk factors for SIDS."
@@ -96,7 +96,7 @@
                },
                {
                   "text" : "Install window guards.",
-                  "section" : "WINDOWS",
+                  "section" : "Windows",
                   "tips" : [
                      {
                         "text" : "While window guards provide reassurance, they are not a substitute for parental supervision."
@@ -111,37 +111,37 @@
             "tasks" : [
                {
                   "text" : "Store tools out of reach and don't allow electrical cords to dangle.",
-                  "section" : "STORAGE",
+                  "section" : "Storage",
                   "tips" : []
                },
                {
                   "text" : "Put toxic substances in locked storage.",
-                  "section" : "STORAGE",
+                  "section" : "Storage",
                   "tips" : []
                },
                {
                   "text" : "Store buckets upside down to prevent liquid accumulation.",
-                  "section" : "STORAGE",
+                  "section" : "Storage",
                   "tips" : []
                },
                {
                   "text" : "Keep recycling and garbage containers closed and locked.",
-                  "section" : "STORAGE",
+                  "section" : "Storage",
                   "tips" : []
                },
                {
                   "text" : "Install lock on the door connecting the house to the garage.",
-                  "section" : "ENTRYWAYS",
+                  "section" : "Entryways",
                   "tips" : []
                },
                {
                   "text" : "Install lock on any entryways leading to the basement.",
-                  "section" : "ENTRYWAYS",
+                  "section" : "Entryways",
                   "tips" : []
                },
                {
                   "text" : "Make sure the garage door has a safety sensor.",
-                  "section" : "GARAGE DOOR",
+                  "section" : "Garage Door",
                   "tips" : []
                }
             ]
@@ -152,7 +152,7 @@
             "tasks" : [
                {
                   "text" : "Secure cabinets with cabinet locks.",
-                  "section" : "STORAGE",
+                  "section" : "Storage",
                   "tips" : [
                      {
                         "text" : "Put safety guards on any cabinet or drawer that contains medicine or any other hazardous items."
@@ -161,12 +161,12 @@
                },
                {
                   "text" : "Ensure medications are out of reach and secured with childproof tops.",
-                  "section" : "STORAGE",
+                  "section" : "Storage",
                   "tips" : []
                },
                {
                   "text" : "Secure toilet with toilet locks.",
-                  "section" : "TOILET",
+                  "section" : "Toilet",
                   "tips" : [
                      {
                         "text" : "Put safety guards on toilets to make sure that your child cannot get in them."
@@ -175,7 +175,7 @@
                },
                {
                   "text" : "Install a spout cover in the bathtub.",
-                  "section" : "BATHTUB & SHOWER",
+                  "section" : "Bathtub & Shower",
                   "tips" : [
                      {
                         "text" : "Note: bathtub spouts are the third most common cause of stitches in babies."
@@ -184,12 +184,12 @@
                },
                {
                   "text" : "Put non-slip mats in and beside the bathtub.",
-                  "section" : "BATHTUB & SHOWER",
+                  "section" : "Bathtub & Shower",
                   "tips" : []
                },
                {
                   "text" : "Have a plumber install an anti-scald device for the faucets and shower head.",
-                  "section" : "BATHTUB & SHOWER",
+                  "section" : "Bathtub & Shower",
                   "tips" : [
                      {
                         "text" : "Regulate the water temperature to help prevent burns."
@@ -198,12 +198,12 @@
                },
                {
                   "text" : "Reduce water heater settings to 120 degrees Farenheit.",
-                  "section" : "BATHTUB & SHOWER",
+                  "section" : "Bathtub & Shower",
                   "tips" : []
                },
                {
                   "text" : "Install a stable shower curtain rod.",
-                  "section" : "BATHTUB & SHOWER",
+                  "section" : "Bathtub & Shower",
                   "tips" : []
                }
             ]
@@ -214,7 +214,7 @@
             "tasks" : [
                {
                   "text" : "Install covers for stove and oven knobs.",
-                  "section" : "STOVE & OVEN",
+                  "section" : "Stove & Oven",
                   "tips" : [
                      {
                         "text" : "This prevents your child from turning on the stove or oven accidentally."
@@ -223,7 +223,7 @@
                },
                {
                   "text" : "Install an appliance latch for the oven door.",
-                  "section" : "STOVE & OVEN",
+                  "section" : "Stove & Oven",
                   "tips" : [
                      {
                         "text" : "This prevents your child from opening a potentially hot oven."
@@ -232,7 +232,7 @@
                },
                {
                   "text" : "Install stove guard to block access to burners.",
-                  "section" : "STOVE & OVEN",
+                  "section" : "Stove & Oven",
                   "tips" : [
                      {
                         "text" : "A barrier keeps your child's small hands away from burners."
@@ -241,27 +241,27 @@
                },
                {
                   "text" : "Always keep pot handles turned toward wall while cooking.",
-                  "section" : "STOVE & OVEN",
+                  "section" : "Stove & Oven",
                   "tips" : []
                },
                {
                   "text" : "Always keep hot food and drinks away from table edge.",
-                  "section" : "STOVE & OVEN",
+                  "section" : "Stove & Oven",
                   "tips" : []
                },
                {
                   "text" : "When possible, cook using only back burners.",
-                  "section" : "STOVE & OVEN",
+                  "section" : "Stove & Oven",
                   "tips" : []
                },
                {
                   "text" : "Install safety latches on refrigerator and freezer doors.",
-                  "section" : "REFRIGERATOR",
+                  "section" : "Refrigerator",
                   "tips" : []
                },
                {
                   "text" : "Remove magnets from the refrigerator.",
-                  "section" : "REFRIGERATOR",
+                  "section" : "Refrigerator",
                   "tips" : [
                      {
                         "text" : "Magnets are a choking hazard."
@@ -270,12 +270,12 @@
                },
                {
                   "text" : "Install a safety cover on the garbage disposal.",
-                  "section" : "SINK",
+                  "section" : "Sink",
                   "tips" : []
                },
                {
                   "text" : "Do not use placemats or tablecloths.",
-                  "section" : "STORAGE",
+                  "section" : "Storage",
                   "tips" : [
                      {
                         "text" : "This prevents your child from yanking loose cloth and having items fall on them."
@@ -284,7 +284,7 @@
                },
                {
                   "text" : "Attach safety latches and locks.",
-                  "section" : "STORAGE",
+                  "section" : "Storage",
                   "tips" : [
                      {
                         "text" : "Secure any drawers containing knives, scissors, or sharp utensils."
@@ -302,62 +302,62 @@
             "tasks" : [
                {
                   "text" : "Install foam bumpers on the fireplace hearth and mantles.",
-                  "section" : "FURNITURE",
+                  "section" : "Furniture",
                   "tips" : []
                },
                {
                   "text" : "Secure heavy furniture to walls.",
-                  "section" : "FURNITURE",
+                  "section" : "Furniture",
                   "tips" : []
                },
                {
                   "text" : "Secure the television to the wall, or place the television on tall sturdy furniture.",
-                  "section" : "FURNITURE",
+                  "section" : "Furniture",
                   "tips" : []
                },
                {
                   "text" : "Remove floor lamps.",
-                  "section" : "FURNITURE",
+                  "section" : "Furniture",
                   "tips" : []
                },
                {
                   "text" : "Block access to all floor heaters and radiators.",
-                  "section" : "FURNITURE",
+                  "section" : "Furniture",
                   "tips" : []
                },
                {
                   "text" : "Install fireplace screen around fireplace.",
-                  "section" : "FURNITURE",
+                  "section" : "Furniture",
                   "tips" : []
                },
                {
                   "text" : "Install bumpers to sharp corners on furniture.",
-                  "section" : "FURNITURE",
+                  "section" : "Furniture",
                   "tips" : []
                },
                {
                   "text" : "Move all electric cords behind furniture or under rugs.",
-                  "section" : "STORAGE",
+                  "section" : "Storage",
                   "tips" : []
                },
                {
                   "text" : "Latch cupboards, doors, and drawers within baby's reach.",
-                  "section" : "STORAGE",
+                  "section" : "Storage",
                   "tips" : []
                },
                {
                   "text" : "Purchase baby-safe doorstops.",
-                  "section" : "ENTRYWAYS",
+                  "section" : "Entryways",
                   "tips" : []
                },
                {
                   "text" : "Place baby gates at the top and bottom of every set of stairs.",
-                  "section" : "ENTRYWAYS",
+                  "section" : "Entryways",
                   "tips" : []
                },
                {
                   "text" : "Install plexiglass on stair and balcony rail spaces greater than four inches.",
-                  "section" : "ENTRYWAYS",
+                  "section" : "Entryways",
                   "tips" : []
                }
             ]
@@ -368,12 +368,12 @@
             "tasks" : [
                {
                   "text" : "Ensure backyard gates latch securely.",
-                  "section" : "YARD",
+                  "section" : "Yard",
                   "tips" : []
                },
                {
                   "text" : "Make a kid-free zone.",
-                  "section" : "YARD",
+                  "section" : "Yard",
                   "tips" : [
                      {
                         "text" : "Prevent your child from entering the grilling area, as well as any structure or shed that might contain tools, lawn mowers, etc."
@@ -382,7 +382,7 @@
                },
                {
                   "text" : "Ensure ground cover is soft (grass or rubber), and avoid pea gravel at all costs.",
-                  "section" : "YARD",
+                  "section" : "Yard",
                   "tips" : [
                      {
                         "text" : "Pea gravel is a choking hazard."
@@ -391,7 +391,7 @@
                },
                {
                   "text" : "Avoid dangerous plants.",
-                  "section" : "YARD",
+                  "section" : "Yard",
                   "tips" : [
                      {
                         "text" : "This includes plants that are toxic (mushrooms), prickly (rose, bougainvillea), and bear fruits (berries)."
@@ -400,12 +400,12 @@
                },
                {
                   "text" : "Ensure fertilizers and insecticides are safe during and after application.",
-                  "section" : "YARD",
+                  "section" : "Yard",
                   "tips" : []
                },
                {
                   "text" : "Store garden hoses out of the sun.",
-                  "section" : "STORAGE",
+                  "section" : "Storage",
                   "tips" : [
                      {
                         "text" : "Water remaining in the hose can scald the child."
@@ -414,12 +414,12 @@
                },
                {
                   "text" : "Empty wading pools and store upright after each use.",
-                  "section" : "POOL",
+                  "section" : "Pool",
                   "tips" : []
                },
                {
                   "text" : "Install a locked fence around permanent pool structures.",
-                  "section" : "POOL",
+                  "section" : "Pool",
                   "tips" : [
                      {
                         "text" : "Ensure that the gate to the pool has a lock that prevents your child from entering alone but can be opened quickly by an adult in case of an emergency."
@@ -431,7 +431,7 @@
                },
                {
                   "text" : "Install tall flags on riding toys and ensure riding area is safe.",
-                  "section" : "TOYS",
+                  "section" : "Toys",
                   "tips" : []
                }
             ]
@@ -442,7 +442,7 @@
             "tasks" : [
                {
                   "text" : "Cut window-blind cords.",
-                  "section" : "WINDOWS",
+                  "section" : "Windows",
                   "tips" : [
                      {
                         "text" : "Alternatively, use safety tassels and inner cord stops so that your child cannot get entagled."
@@ -451,7 +451,7 @@
                },
                {
                   "text" : "Place covers over unused outlets.",
-                  "section" : "OUTLETS",
+                  "section" : "Outlets",
                   "tips" : [
                      {
                         "text" : "Sliding covers are the best as the push-in ones can be pulled out and possibly choked on."
@@ -460,12 +460,12 @@
                },
                {
                   "text" : "Install hardware-mounted safety gates in front of any stairs in the house.",
-                  "section" : "STAIRWAYS",
+                  "section" : "Stairways",
                   "tips" : []
                },
                {
                   "text" : "Install corner and edge bumpers.",
-                  "section" : "FURNITURE",
+                  "section" : "Furniture",
                   "tips" : [
                      {
                         "text" : "These will help prevent injuries from falls against sharp edges."
@@ -474,7 +474,7 @@
                },
                {
                   "text" : "Use doorstops and door holders.",
-                  "section" : "ENTRYWAYS",
+                  "section" : "Entryways",
                   "tips" : [
                      {
                         "text" : "This prevents your child's small fingers from being crushed or pinched in doors and door hinges."
@@ -483,7 +483,7 @@
                },
                {
                   "text" : "Ensure all cords are off the floor.",
-                  "section" : "STORAGE",
+                  "section" : "Storage",
                   "tips" : [
                      {
                         "text" : "Your child can get tangled in any cords."

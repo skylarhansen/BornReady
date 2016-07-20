@@ -61,7 +61,7 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if let sectionName = sections[section].first?.section {
+        if let sectionName = sections[section].first?.section.uppercaseString {
             return sectionName
         } else {
             return nil

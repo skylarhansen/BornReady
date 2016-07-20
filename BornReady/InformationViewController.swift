@@ -27,7 +27,7 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func setUpLabelOutlets() {
-        sectionLabel.text = task?.section
+        sectionLabel.text = task?.section.uppercaseString
         sectionLabel.font = UIFont(name: "Aller-Regular", size: 20)
         taskLabel.text = task?.text
         taskLabel.font = UIFont(name: "Aller-Regular", size: 16)
