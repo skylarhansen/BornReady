@@ -30,6 +30,8 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        taskListTableView.rowHeight = UITableViewAutomaticDimension
+        taskListTableView.estimatedRowHeight = 40
     }
     
     override func viewWillAppear(animated: Bool) {
