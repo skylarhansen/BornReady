@@ -8,36 +8,45 @@
 
 import UIKit
 
-class InformationViewController: UIViewController {
-
+class InformationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var task: Task?
+    
     @IBOutlet weak var sectionLabel: UILabel!
     @IBOutlet weak var taskLabel: UILabel!
     @IBOutlet weak var isCompleteButton: UIButton!
-    @IBOutlet weak var shareButton: UIBarButtonItem!
-    @IBOutlet weak var shoppingButton: UIBarButtonItem!
-    @IBOutlet weak var infoButton: UIBarButtonItem!
-    @IBOutlet weak var isBookmarkedButton: UIBarButtonItem!
+    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var shoppingButton: UIButton!
+    @IBOutlet weak var tipsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        setUpLabelOutlets()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setUpLabelOutlets() {
+        sectionLabel.text = task?.section
+        taskLabel.text = task?.text
     }
-    */
-
+    
+    // MARK: - UITableViewDataSource Functions
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let task = task,
+            tips = task.tips else { return 0 }
+        return tips.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("tipCell", forIndexPath: indexPath)
+        
+        guard let task = task,
+            tips = task.tips,
+            let tip = tips[indexPath.row] as? Tip else { return UITableViewCell() }
+        
+        cell.textLabel?.text = tip.text
+        return cell
+    }
+    
 }

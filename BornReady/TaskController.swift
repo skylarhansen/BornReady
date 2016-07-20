@@ -58,8 +58,8 @@ class TaskController {
     }
     
     static func makeSections(tasks: [Task]) -> [[Task]] {
-        var sectionNames = [String]()
-        var sections = [[Task]]()
+        var sectionNames: [String] = []
+        var sections: [[Task]] = []
         for task in tasks {
             if sectionNames.contains(task.section) == false {
                 sectionNames.append(task.section)

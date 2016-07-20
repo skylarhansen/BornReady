@@ -16,26 +16,20 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        TaskController.sharedController.serializeJSON { (rooms) in
-//            print(rooms[0].tasks?.count)
+        let firstRun = NSUserDefaults.standardUserDefaults().boolForKey("firstRun") as Bool
+        if !firstRun {
+            TaskController.sharedController.serializeJSON({ (rooms) in
+            
+            })
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstRun")
         }
+        
 //        var sectionsArray: [String] = []
         
 //        guard let tasks = TaskController.sharedController.rooms[0].tasks,
 //            let task = tasks[0] as? Task,
 //            let tips = task.tips,
 //            let _ = tips[0] as? Tip else { return }
-//    
-//        
-//        for task in tasks {
-//            guard let task = task as? Task else { return }
-//            if sectionsArray.contains(task.section) {
-//                
-//            } else {
-//                sectionsArray.append(task.section)
-//            }
-//        }
-        
         
 //        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
 //        self.navigationController?.navigationBar.shadowImage = UIImage()

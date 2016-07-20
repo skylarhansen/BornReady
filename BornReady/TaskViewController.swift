@@ -14,9 +14,10 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var room: Room?
     
+    // turns tasks from NSOrderedSet into an array and then calls makeSections func
     var sections: [[Task]] {
         guard let tasks = room?.tasks else { return [] }
-        var taskArray = [Task]()
+        var taskArray: [Task] = []
         for task in tasks {
             if let task = task as? Task {
                 taskArray.append(task)
@@ -77,14 +78,24 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
         taskListTableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
     }
     
-    /*
      // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toTaskInfo",
+        let indexPath = taskListTableView.indexPathForSelectedRow {
+            let infoVC = segue.destinationViewController as? InformationViewController
+            let task = sections[indexPath.section][indexPath.row]
+            infoVC?.task = task
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
