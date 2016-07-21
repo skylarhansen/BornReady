@@ -30,9 +30,12 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        taskListTableView.estimatedRowHeight = 100
         taskListTableView.rowHeight = UITableViewAutomaticDimension
-        taskListTableView.estimatedRowHeight = 40
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
+        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        self.navigationItem.title = room?.name.uppercaseString
 
     }
     
@@ -61,6 +64,8 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         taskListTableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
+    
+    // customize sections
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if let sectionName = sections[section].first?.section.uppercaseString {

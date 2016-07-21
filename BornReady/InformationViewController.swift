@@ -55,6 +55,27 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
     
+    @IBAction func shareButtonTapped(sender: AnyObject) {
+        presentActivityViewController()
+    }
+    
+    @IBAction func shoppingButtonTapped(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "http://www.google.com")!)
+    }
+    
+    // customize share button attributes
+    
+    func presentActivityViewController() {
+        
+        guard let task = task?.text else { return }
+        
+        let string = "Check out this baby-proofing tip: \"\(task)\""
+        
+        let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
+        
+        presentViewController(activityViewController, animated: true, completion: nil)
+    }
+    
     // MARK: - UITableViewDataSource Functions
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -77,7 +98,7 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 90
+        return 50
     }
     
 }

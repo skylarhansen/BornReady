@@ -23,18 +23,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             })
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstRun")
         }
-        
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
-
     
 //        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
 //        self.navigationController?.navigationBar.shadowImage = UIImage()
-//        self.navigationController?.navigationBar.translucent = false
+        self.navigationController?.navigationBar.translucent = false
         
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.init(red: 0.67, green: 0.67, blue: 0.67, alpha: 1.0),
-                                                                        NSFontAttributeName: UIFont(name: "Aller-Regular", size: 21)!]
-        self.navigationController?.view.backgroundColor = UIColor(red: 0.248, green: 0.248, blue: 0.248, alpha: 1.0)
-        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.init(red: 67/255, green: 67/255, blue: 67/255, alpha: 1.0), NSFontAttributeName: UIFont(name: "Aller-Regular", size: 20)!]
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1.0)
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1.0)
     }
     
     override func didReceiveMemoryWarning() {
