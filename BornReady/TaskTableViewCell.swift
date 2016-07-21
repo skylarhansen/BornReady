@@ -14,7 +14,6 @@ class TaskTableViewCell: UITableViewCell {
     
     @IBOutlet weak var isCompleteButton: UIButton!
     @IBOutlet weak var taskLabel: UILabel!
-    @IBOutlet weak var chevronImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -51,7 +50,6 @@ extension TaskTableViewCell {
         taskLabel.text = task.text
         taskLabel.font = UIFont(name: "Aller-Regular", size: 16)
         updateIsCompleteButton(task.isComplete.boolValue)
-        chevronImageView.image = UIImage(named: "chevron")
     }
 }
 

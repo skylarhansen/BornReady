@@ -23,7 +23,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             })
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstRun")
         }
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
     
 //        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
 //        self.navigationController?.navigationBar.shadowImage = UIImage()

@@ -40,6 +40,7 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         taskListTableView.reloadData()
     }
     
