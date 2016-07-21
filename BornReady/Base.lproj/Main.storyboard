@@ -121,8 +121,8 @@
                                                         <view contentMode="scaleToFill" horizontalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="pkX-5a-M5v">
                                                             <rect key="frame" x="0.0" y="0.0" width="60" height="36"/>
                                                             <subviews>
-                                                                <button opaque="NO" contentMode="center" horizontalHuggingPriority="749" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tN0-Hz-6Nq">
-                                                                    <rect key="frame" x="165" y="0.0" width="60" height="60"/>
+                                                                <button opaque="NO" contentMode="center" horizontalHuggingPriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tN0-Hz-6Nq">
+                                                                    <rect key="frame" x="12" y="0.0" width="36" height="36"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="tN0-Hz-6Nq" secondAttribute="height" multiplier="1:1" id="4BH-rQ-4fA"/>
                                                                     </constraints>

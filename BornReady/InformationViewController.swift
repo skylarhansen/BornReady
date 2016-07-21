@@ -60,7 +60,9 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     @IBAction func shoppingButtonTapped(sender: AnyObject) {
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://www.google.com")!)
+        guard let task = task else  { return }
+        
+        UIApplication.sharedApplication().openURL(NSURL(string: task.link) ?? NSURL())
     }
     
     // customize share button attributes

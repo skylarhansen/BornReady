@@ -6,27 +6,45 @@
             "image" : "laundryRoom",
             "tasks" : [
                {
-                  "text" : "Secure laundry room door with door locks.",
+                  "text" : "Secure laundry room door with a lock.",
                   "section" : "Entryways",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=0a3570bf0ead09c3a6ef61cc9936e7e0&camp=1789&creative=9325&index=baby-products&keywords=door lock",
                   "tips" : []
                },
                {
-                  "text" : "Secure drawers or cabinets that contain hazardous products with locks.",
+                  "text" : "Secure drawers or cabinets that contain hazardous products with safety latches.",
                   "section" : "Storage",
-                  "tips" : []
-               },
-               {
-                  "text" : "Activate child lock feature on washer's control panel.",
-                  "section" : "Washer & Dryer",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=9b60978e3d58aa2e55a9859d3c7259e0&camp=1789&creative=9325&index=baby-products&keywords=cabinet lock",
                   "tips" : [
                      {
-                        "text" : "This prevents the door from opening mid-cycle."
+                        "text" : "Install locks on any drawer or cabinet that contains any hazardous items."
+                     }
+                  ]
+               },
+               {
+                  "text" : "Activate the child lock feature on the washer.",
+                  "section" : "Washer & Dryer",
+                  "link" : "",
+                  "tips" : [
+                     {
+                        "text" : "This prevents your child from opening the washer door midcycle."
                      }
                   ]
                }, 
                {
+                  "text" : "Install an exterior washer safety lock.",
+                  "section" : "Washer & Dryer",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=f6399949d31a4d2fc8c3d303cd1233ec&camp=1789&creative=9325&index=baby-products&keywords=washer lock",
+                  "tips" : [
+                     {
+                        "text" : "This prevents your child from opening the washer door when not in use."
+                     }
+                  ]
+               },
+               {
                   "text" : "Limit space on the sides of the washer and dryer.",
                   "section" : "Washer & Dryer",
+                  "link" : "",
                   "tips" : [
                      {
                         "text" : "This prevents your child from crawling behind the machines."
@@ -42,6 +60,7 @@
                {
                   "text" : "Purchase a crib with fixed sides, narrow slats, and no corner posts. If using a glider, purchase one with a stop-lock mechanism.",
                   "section" : "Crib",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=b670d292b277f7fdc13f7be2ea654113&camp=1789&creative=9325&index=baby-products&keywords=crib fixed",
                   "tips" : [
                      {
                         "text" : "Drop-sided cribs pose a threat to infants, many of whom have been injured or killed as a result of hardware malfunctions common to the crib's design."
@@ -60,6 +79,7 @@
                {
                   "text" : "Ensure the crib mattress is firm and well-fitting.",
                   "section" : "Crib",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=51901427fde97f2a54f1afed8e0c248a&camp=1789&creative=9325&index=baby-products&keywords=crib mattress",
                   "tips" : [
                      {
                         "text" : "There should be no more than two fingers of space between the side of the mattress and the crib frame; any larger and your baby may become entrapped between the two, resulting in injury or suffocation."
@@ -69,6 +89,7 @@
                {
                   "text" : "Remove soft toys and bedding from crib. Leave only a thin mattress and fitted sheet.",
                   "section" : "Crib",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=51901427fde97f2a54f1afed8e0c248a&camp=1789&creative=9325&index=baby-products&keywords=crib mattress",
                   "tips" : [
                      {
                         "text" : "Blankets, pillows, and bumpers of any kind pose a risk of suffocation and or entrapment and should never be used in a crib."
@@ -78,16 +99,19 @@
                {
                   "text" : "Once baby can sit up, remove hanging mobiles from crib.",
                   "section" : "Crib",
+                  "link" : "",
                   "tips" : []
                },
                {
                   "text" : "Move crib away from anything that could be used for climbing.",
                   "section" : "Crib",
+                  "link" : "",
                   "tips" : []
                },
                {
                   "text" : "Ensure crib is not next to a heater or an area with direct sunlight.",
                   "section" : "Crib",
+                  "link" : "",
                   "tips" : [
                      {
                         "text" : "Both are risk factors for SIDS."
@@ -97,6 +121,7 @@
                {
                   "text" : "Install window guards.",
                   "section" : "Windows",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=cde90059e2b598fcc9374f546fed5d1c&camp=1789&creative=9325&index=baby-products&keywords=window guard",
                   "tips" : [
                      {
                         "text" : "While window guards provide reassurance, they are not a substitute for parental supervision."
@@ -112,36 +137,43 @@
                {
                   "text" : "Store tools out of reach and don't allow electrical cords to dangle.",
                   "section" : "Storage",
+                  "link" : "",
                   "tips" : []
                },
                {
                   "text" : "Put toxic substances in locked storage.",
                   "section" : "Storage",
+                  "link" : "",
                   "tips" : []
                },
                {
                   "text" : "Store buckets upside down to prevent liquid accumulation.",
                   "section" : "Storage",
+                  "link" : "",
                   "tips" : []
                },
                {
                   "text" : "Keep recycling and garbage containers closed and locked.",
                   "section" : "Storage",
+                  "link" : "",
                   "tips" : []
                },
                {
                   "text" : "Install lock on the door connecting the house to the garage.",
                   "section" : "Entryways",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=0a3570bf0ead09c3a6ef61cc9936e7e0&camp=1789&creative=9325&index=baby-products&keywords=door lock",
                   "tips" : []
                },
                {
                   "text" : "Install lock on any entryways leading to the basement.",
                   "section" : "Entryways",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=0a3570bf0ead09c3a6ef61cc9936e7e0&camp=1789&creative=9325&index=baby-products&keywords=door lock",
                   "tips" : []
                },
                {
                   "text" : "Make sure the garage door has a safety sensor.",
                   "section" : "Garage Door",
+                  "link" : "",
                   "tips" : []
                }
             ]
@@ -151,22 +183,25 @@
             "image" : "bathroom",
             "tasks" : [
                {
-                  "text" : "Secure cabinets with cabinet locks.",
+                  "text" : "Secure drawers or cabinets that contain hazardous products with safety latches",
                   "section" : "Storage",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=9b60978e3d58aa2e55a9859d3c7259e0&camp=1789&creative=9325&index=baby-products&keywords=cabinet lock",
                   "tips" : [
                      {
-                        "text" : "Put safety guards on any cabinet or drawer that contains medicine or any other hazardous items."
+                        "text" : "Install locks on any drawer or cabinet that contains medicine or any other hazardous items."
                      }
                   ]
                },
                {
                   "text" : "Ensure medications are out of reach and secured with childproof tops.",
                   "section" : "Storage",
+                  "link" : "",
                   "tips" : []
                },
                {
-                  "text" : "Secure toilet with toilet locks.",
+                  "text" : "Install safety latches on toilets.",
                   "section" : "Toilet",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=784f51bc760799b65b5402a1959b2ff5&camp=1789&creative=9325&index=baby-products&keywords=toilet lock",
                   "tips" : [
                      {
                         "text" : "Put safety guards on toilets to make sure that your child cannot get in them."
@@ -176,6 +211,7 @@
                {
                   "text" : "Install a spout cover in the bathtub.",
                   "section" : "Bathtub & Shower",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=e91fff55fcfbab7bfabd3ae7c9b36ef2&camp=1789&creative=9325&index=baby-products&keywords=spout cover",
                   "tips" : [
                      {
                         "text" : "Note: bathtub spouts are the third most common cause of stitches in babies."
@@ -185,11 +221,13 @@
                {
                   "text" : "Put non-slip mats in and beside the bathtub.",
                   "section" : "Bathtub & Shower",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=6ed2235f664e896fa6d4eec91befc3a0&camp=1789&creative=9325&index=baby-products&keywords=bathtub mat",
                   "tips" : []
                },
                {
                   "text" : "Have a plumber install an anti-scald device for the faucets and shower head.",
                   "section" : "Bathtub & Shower",
+                  "link" : "",
                   "tips" : [
                      {
                         "text" : "Regulate the water temperature to help prevent burns."
@@ -199,11 +237,13 @@
                {
                   "text" : "Reduce water heater settings to 120 degrees Farenheit.",
                   "section" : "Bathtub & Shower",
+                  "link" : "",
                   "tips" : []
                },
                {
-                  "text" : "Install a stable shower curtain rod.",
+                  "text" : "Ensure the shower curtain rod is stable.",
                   "section" : "Bathtub & Shower",
+                  "link" : "",
                   "tips" : []
                }
             ]
@@ -215,6 +255,7 @@
                {
                   "text" : "Install covers for stove and oven knobs.",
                   "section" : "Stove & Oven",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=9c2b66135d06527b50515708fde71068&camp=1789&creative=9325&index=baby-products&keywords=stove knob",
                   "tips" : [
                      {
                         "text" : "This prevents your child from turning on the stove or oven accidentally."
@@ -222,8 +263,9 @@
                   ]
                },
                {
-                  "text" : "Install an appliance latch for the oven door.",
+                  "text" : "Install a safety latch on the oven door.",
                   "section" : "Stove & Oven",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=cd913d4da98c04ddf142a1001c8963e1&camp=1789&creative=9325&index=baby-products&keywords=oven door lock",
                   "tips" : [
                      {
                         "text" : "This prevents your child from opening a potentially hot oven."
@@ -231,8 +273,9 @@
                   ]
                },
                {
-                  "text" : "Install stove guard to block access to burners.",
+                  "text" : "Install a stove guard to block access to burners.",
                   "section" : "Stove & Oven",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=0403446cd7accac9d6752bfd68dbedad&camp=1789&creative=9325&index=baby-products&keywords=stove guard",
                   "tips" : [
                      {
                         "text" : "A barrier keeps your child's small hands away from burners."
@@ -242,26 +285,31 @@
                {
                   "text" : "Always keep pot handles turned toward wall while cooking.",
                   "section" : "Stove & Oven",
+                  "link" : "",
                   "tips" : []
                },
                {
                   "text" : "Always keep hot food and drinks away from table edge.",
                   "section" : "Stove & Oven",
+                  "link" : "",
                   "tips" : []
                },
                {
                   "text" : "When possible, cook using only back burners.",
                   "section" : "Stove & Oven",
+                  "link" : "",
                   "tips" : []
                },
                {
                   "text" : "Install safety latches on refrigerator and freezer doors.",
                   "section" : "Refrigerator",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=31a77dcaff3cc6567d15723ca7bcfb0b&camp=1789&creative=9325&index=baby-products&keywords=appliance safety latch",
                   "tips" : []
                },
                {
                   "text" : "Remove magnets from the refrigerator.",
                   "section" : "Refrigerator",
+                  "link" : "",
                   "tips" : [
                      {
                         "text" : "Magnets are a choking hazard."
@@ -271,11 +319,13 @@
                {
                   "text" : "Install a safety cover on the garbage disposal.",
                   "section" : "Sink",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=3ca729a1cf87a1de6d67bd4ca0430170&camp=1789&creative=9325&index=baby-products&keywords=garbage disposal cover",
                   "tips" : []
                },
                {
                   "text" : "Do not use placemats or tablecloths.",
                   "section" : "Storage",
+                  "link" : "",
                   "tips" : [
                      {
                         "text" : "This prevents your child from yanking loose cloth and having items fall on them."
@@ -283,8 +333,9 @@
                   ]
                },
                {
-                  "text" : "Attach safety latches and locks.",
+                  "text" : "Secure drawers or cabinets that contain dangerous products with safety latches.",
                   "section" : "Storage",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=9b60978e3d58aa2e55a9859d3c7259e0&camp=1789&creative=9325&index=baby-products&keywords=cabinet lock",
                   "tips" : [
                      {
                         "text" : "Secure any drawers containing knives, scissors, or sharp utensils."
@@ -301,63 +352,67 @@
             "image" : "livingRoom",
             "tasks" : [
                {
-                  "text" : "Install foam bumpers on the fireplace hearth and mantles.",
+                  "text" : "Install foam bumpers on sharp corners of furniture.",
                   "section" : "Furniture",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=9f25a04633af4c2a7d5431b18d57fffe&camp=1789&creative=9325&index=baby-products&keywords=furniture bumper",
                   "tips" : []
                },
                {
                   "text" : "Secure heavy furniture to walls.",
                   "section" : "Furniture",
-                  "tips" : []
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=25bb19b65cd91913030056dd41d52923&camp=1789&creative=9325&index=baby-products&keywords=furniture straps",
+                  "tips" : [] 
                },
                {
                   "text" : "Secure the television to the wall, or place the television on tall sturdy furniture.",
                   "section" : "Furniture",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=25bb19b65cd91913030056dd41d52923&camp=1789&creative=9325&index=baby-products&keywords=furniture straps",
                   "tips" : []
                },
                {
                   "text" : "Remove floor lamps.",
                   "section" : "Furniture",
+                  "link" : "",
                   "tips" : []
                },
                {
                   "text" : "Block access to all floor heaters and radiators.",
                   "section" : "Furniture",
+                  "link" : "",
                   "tips" : []
                },
                {
-                  "text" : "Install fireplace screen around fireplace.",
+                  "text" : "Install a screen around the fireplace.",
                   "section" : "Furniture",
-                  "tips" : []
-               },
-               {
-                  "text" : "Install bumpers to sharp corners on furniture.",
-                  "section" : "Furniture",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=1b1585b6aa0f3d81bf5174f8e88a8bc4&camp=1789&creative=9325&index=baby-products&keywords=fireplace screen",
                   "tips" : []
                },
                {
                   "text" : "Move all electric cords behind furniture or under rugs.",
                   "section" : "Storage",
+                  "link" : "",
                   "tips" : []
                },
                {
-                  "text" : "Latch cupboards, doors, and drawers within baby's reach.",
+                  "text" : "Secure drawers or cabinets with safety latches.",
                   "section" : "Storage",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=9b60978e3d58aa2e55a9859d3c7259e0&camp=1789&creative=9325&index=baby-products&keywords=cabinet lock",
                   "tips" : []
                },
                {
-                  "text" : "Purchase baby-safe doorstops.",
+                  "text" : "Use baby-safe doorstops and door holders.",
                   "section" : "Entryways",
-                  "tips" : []
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=152eadf555a6436807d400759c342cbe&camp=1789&creative=9325&index=baby-products&keywords=doorstop",
+                  "tips" : [
+                     {
+                        "text" : "This prevents your child's small fingers from being crushed or pinched in doors and door hinges."
+                     }
+                  ]
                },
                {
-                  "text" : "Place baby gates at the top and bottom of every set of stairs.",
+                  "text" : "Install plexiglass on stair and balcony rail spaces greater than 4 inches.",
                   "section" : "Entryways",
-                  "tips" : []
-               },
-               {
-                  "text" : "Install plexiglass on stair and balcony rail spaces greater than four inches.",
-                  "section" : "Entryways",
+                  "link" : "",
                   "tips" : []
                }
             ]
@@ -369,11 +424,13 @@
                {
                   "text" : "Ensure backyard gates latch securely.",
                   "section" : "Yard",
+                  "link" : "",
                   "tips" : []
                },
                {
                   "text" : "Make a kid-free zone.",
                   "section" : "Yard",
+                  "link" : "",
                   "tips" : [
                      {
                         "text" : "Prevent your child from entering the grilling area, as well as any structure or shed that might contain tools, lawn mowers, etc."
@@ -383,6 +440,7 @@
                {
                   "text" : "Ensure ground cover is soft (grass or rubber), and avoid pea gravel at all costs.",
                   "section" : "Yard",
+                  "link" : "",
                   "tips" : [
                      {
                         "text" : "Pea gravel is a choking hazard."
@@ -392,6 +450,7 @@
                {
                   "text" : "Avoid dangerous plants.",
                   "section" : "Yard",
+                  "link" : "",
                   "tips" : [
                      {
                         "text" : "This includes plants that are toxic (mushrooms), prickly (rose, bougainvillea), and bear fruits (berries)."
@@ -401,25 +460,29 @@
                {
                   "text" : "Ensure fertilizers and insecticides are safe during and after application.",
                   "section" : "Yard",
+                  "link" : "",
                   "tips" : []
                },
                {
                   "text" : "Store garden hoses out of the sun.",
                   "section" : "Storage",
+                  "link" : "",
                   "tips" : [
                      {
-                        "text" : "Water remaining in the hose can scald the child."
+                        "text" : "Water remaining in the hose can scald your child."
                      }
                   ]
                },
                {
                   "text" : "Empty wading pools and store upright after each use.",
                   "section" : "Pool",
+                  "link" : "",
                   "tips" : []
                },
                {
                   "text" : "Install a locked fence around permanent pool structures.",
                   "section" : "Pool",
+                  "link" : "",
                   "tips" : [
                      {
                         "text" : "Ensure that the gate to the pool has a lock that prevents your child from entering alone but can be opened quickly by an adult in case of an emergency."
@@ -432,6 +495,7 @@
                {
                   "text" : "Install tall flags on riding toys and ensure riding area is safe.",
                   "section" : "Toys",
+                  "link" : "",
                   "tips" : []
                }
             ]
@@ -443,6 +507,7 @@
                {
                   "text" : "Cut window-blind cords.",
                   "section" : "Windows",
+                  "link" : "",
                   "tips" : [
                      {
                         "text" : "Alternatively, use safety tassels and inner cord stops so that your child cannot get entagled."
@@ -450,8 +515,9 @@
                   ]
                },
                {
-                  "text" : "Place covers over unused outlets.",
+                  "text" : "Place covers over unused electrical outlets.",
                   "section" : "Outlets",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=85eecc123d2cdac39faa6022a86a48c0&camp=1789&creative=9325&index=baby-products&keywords=outlet cover",
                   "tips" : [
                      {
                         "text" : "Sliding covers are the best as the push-in ones can be pulled out and possibly choked on."
@@ -459,13 +525,19 @@
                   ]
                },
                {
-                  "text" : "Install hardware-mounted safety gates in front of any stairs in the house.",
+                  "text" : "Place gates at the top and bottom of every set of stairs.",
                   "section" : "Stairways",
-                  "tips" : []
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=d036855fad59421b21970a52ebaa1fcf&camp=1789&creative=9325&index=baby-products&keywords=stair gate",
+                  "tips" : [
+                     {
+                        "text" : "Install hardware-mounted safety gates in front of any stairs in the house."
+                     }
+                  ]
                },
                {
-                  "text" : "Install corner and edge bumpers.",
+                  "text" : "Install foam bumpers on sharp corners of furniture.",
                   "section" : "Furniture",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=9f25a04633af4c2a7d5431b18d57fffe&camp=1789&creative=9325&index=baby-products&keywords=furniture bumper",
                   "tips" : [
                      {
                         "text" : "These will help prevent injuries from falls against sharp edges."
@@ -473,8 +545,9 @@
                   ]
                },
                {
-                  "text" : "Use doorstops and door holders.",
+                  "text" : "Use baby-safe doorstops and door holders.",
                   "section" : "Entryways",
+                  "link" : "https://www.amazon.com/gp/search?ie=UTF8&tag=borrea05-20&linkCode=ur2&linkId=152eadf555a6436807d400759c342cbe&camp=1789&creative=9325&index=baby-products&keywords=doorstop",
                   "tips" : [
                      {
                         "text" : "This prevents your child's small fingers from being crushed or pinched in doors and door hinges."
@@ -484,6 +557,7 @@
                {
                   "text" : "Ensure all cords are off the floor.",
                   "section" : "Storage",
+                  "link" : "",
                   "tips" : [
                      {
                         "text" : "Your child can get tangled in any cords."

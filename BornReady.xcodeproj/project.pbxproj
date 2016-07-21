@@ -22,9 +22,9 @@
 		8C068AF41D401E0A008E4929 /* Aller_Std_LtIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C068AEE1D401E0A008E4929 /* Aller_Std_LtIt.ttf */; };
 		8C068AF51D401E0A008E4929 /* Aller_Std_Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C068AEF1D401E0A008E4929 /* Aller_Std_Rg.ttf */; };
 		8C068AF61D401E0A008E4929 /* Aller_Std.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C068AF01D401E0A008E4929 /* Aller_Std.ttf */; };
-		8C068B1B1D4034C3008E4929 /* BornReady.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C068B1A1D4034C3008E4929 /* BornReady.json */; };
 		8C939C331D36F45D002710DB /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C939C311D36F45D002710DB /* Task+CoreDataProperties.swift */; };
 		8C939C341D36F45D002710DB /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C939C321D36F45D002710DB /* Task.swift */; };
+		8C98A8161D41837F00029856 /* BornReady.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C98A8151D41837F00029856 /* BornReady.json */; };
 		8CA131F01D374E9400DB18B4 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA131EF1D374E9400DB18B4 /* InformationViewController.swift */; };
 		8CB1C5A61D3059A7006EE550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB1C5A51D3059A7006EE550 /* AppDelegate.swift */; };
 		8CB1C5AB1D3059A7006EE550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB1C5A91D3059A7006EE550 /* Main.storyboard */; };
@@ -69,9 +69,9 @@
 		8C068AEE1D401E0A008E4929 /* Aller_Std_LtIt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aller_Std_LtIt.ttf; sourceTree = "<group>"; };
 		8C068AEF1D401E0A008E4929 /* Aller_Std_Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aller_Std_Rg.ttf; sourceTree = "<group>"; };
 		8C068AF01D401E0A008E4929 /* Aller_Std.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Aller_Std.ttf; sourceTree = "<group>"; };
-		8C068B1A1D4034C3008E4929 /* BornReady.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BornReady.json; sourceTree = "<group>"; };
 		8C939C311D36F45D002710DB /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8C939C321D36F45D002710DB /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		8C98A8151D41837F00029856 /* BornReady.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BornReady.json; sourceTree = "<group>"; };
 		8CA131EF1D374E9400DB18B4 /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		8CB1C5A21D3059A7006EE550 /* BornReady.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BornReady.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB1C5A51D3059A7006EE550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 			children = (
 				8CB1C5A51D3059A7006EE550 /* AppDelegate.swift */,
 				8C0124431D344B170059BB7E /* Stack.swift */,
-				8C068B1A1D4034C3008E4929 /* BornReady.json */,
+				8C98A8151D41837F00029856 /* BornReady.json */,
 				8C068AF71D401E17008E4929 /* Resources */,
 				8C01242A1D34490B0059BB7E /* Model */,
 				8C01244B1D3454280059BB7E /* Controllers */,
@@ -327,7 +327,7 @@
 				8CB1C5B01D3059A7006EE550 /* LaunchScreen.storyboard in Resources */,
 				8CB1C5AD1D3059A7006EE550 /* Assets.xcassets in Resources */,
 				8C068AF41D401E0A008E4929 /* Aller_Std_LtIt.ttf in Resources */,
-				8C068B1B1D4034C3008E4929 /* BornReady.json in Resources */,
+				8C98A8161D41837F00029856 /* BornReady.json in Resources */,
 				8C068AF11D401E0A008E4929 /* Aller_Std_BdIt.ttf in Resources */,
 				8C068AF21D401E0A008E4929 /* Aller_Std_It.ttf in Resources */,
 				8C068AF61D401E0A008E4929 /* Aller_Std.ttf in Resources */,
