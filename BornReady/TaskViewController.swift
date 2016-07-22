@@ -43,7 +43,18 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green: 216/255, blue: 93/255, alpha: 1.0)
         case "Living Room":
             self.navigationController?.navigationBar.barTintColor = UIColor(red: 200/255, green: 130/255, blue: 102/255, alpha: 1.0)
-            
+        case "Nursery & Bedroom":
+            self.navigationController?.navigationBar.barTintColor = UIColor(red: 104/255, green: 170/255, blue: 172/255, alpha: 1.0)
+        case "Garage":
+            self.navigationController?.navigationBar.barTintColor = UIColor(red: 239/255, green: 134/255, blue: 87/255, alpha: 1.0)
+        case "Bathroom":
+            self.navigationController?.navigationBar.barTintColor = UIColor(red: 213/255, green: 147/255, blue: 171/255, alpha: 1.0)
+        case "Outdoors":
+            self.navigationController?.navigationBar.barTintColor = UIColor(red: 96/255, green: 210/255, blue: 123/255, alpha: 1.0)
+        case "Laundry Room":
+            self.navigationController?.navigationBar.barTintColor = UIColor(red: 59/255, green: 184/255, blue: 187/255, alpha: 1.0)
+        case "General":
+            self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green: 144/255, blue: 83/255, alpha: 1.0)
         default:
             break
         }

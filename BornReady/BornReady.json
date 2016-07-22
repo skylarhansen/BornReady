@@ -58,7 +58,7 @@
             ]
          },
          {
-            "name" : "Nursery/Bedroom",
+            "name" : "Nursery & Bedroom",
             "image" : "nursery",
             "tasks" : [
                {
@@ -629,8 +629,8 @@
             ]
          },
          {
-            "name" : "Entire Home",
-            "image" : "entireHome",
+            "name" : "General",
+            "image" : "general",
             "tasks" : [
                {
                   "text" : "Cut window-blind cords.",

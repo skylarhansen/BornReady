@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C00CD041D42BD6000F2E2F3 /* BornReady.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C00CD031D42BD6000F2E2F3 /* BornReady.json */; };
+		8C00CD061D42C9C000F2E2F3 /* BornReady.json in Resources */ = {isa = PBXBuildFile; fileRef = 8C00CD051D42C9C000F2E2F3 /* BornReady.json */; };
 		8C0124281D34440B0059BB7E /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C0124261D34440B0059BB7E /* Model.xcdatamodeld */; };
 		8C01243D1D3449870059BB7E /* Tip+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0124371D3449870059BB7E /* Tip+CoreDataProperties.swift */; };
 		8C01243E1D3449870059BB7E /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0124381D3449870059BB7E /* Tip.swift */; };
@@ -54,7 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8C00CD031D42BD6000F2E2F3 /* BornReady.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BornReady.json; sourceTree = "<group>"; };
+		8C00CD051D42C9C000F2E2F3 /* BornReady.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BornReady.json; sourceTree = "<group>"; };
 		8C0124271D34440B0059BB7E /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		8C0124371D3449870059BB7E /* Tip+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Tip+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		8C0124381D3449870059BB7E /* Tip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
@@ -187,7 +187,7 @@
 			children = (
 				8CB1C5A51D3059A7006EE550 /* AppDelegate.swift */,
 				8C0124431D344B170059BB7E /* Stack.swift */,
-				8C00CD031D42BD6000F2E2F3 /* BornReady.json */,
+				8C00CD051D42C9C000F2E2F3 /* BornReady.json */,
 				8C068AF71D401E17008E4929 /* Resources */,
 				8C01242A1D34490B0059BB7E /* Model */,
 				8C01244B1D3454280059BB7E /* Controllers */,
@@ -327,7 +327,7 @@
 				8CB1C5B01D3059A7006EE550 /* LaunchScreen.storyboard in Resources */,
 				8CB1C5AD1D3059A7006EE550 /* Assets.xcassets in Resources */,
 				8C068AF41D401E0A008E4929 /* Aller_Std_LtIt.ttf in Resources */,
-				8C00CD041D42BD6000F2E2F3 /* BornReady.json in Resources */,
+				8C00CD061D42C9C000F2E2F3 /* BornReady.json in Resources */,
 				8C068AF11D401E0A008E4929 /* Aller_Std_BdIt.ttf in Resources */,
 				8C068AF21D401E0A008E4929 /* Aller_Std_It.ttf in Resources */,
 				8C068AF61D401E0A008E4929 /* Aller_Std.ttf in Resources */,
