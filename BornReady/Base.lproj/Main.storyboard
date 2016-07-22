@@ -220,9 +220,9 @@
                                             <action selector="shareButtonTapped:" destination="hOr-M5-GhS" eventType="touchUpInside" id="1tO-h2-Rtx"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqA-gE-hfY">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqA-gE-hfY">
                                         <rect key="frame" x="300" y="0.0" width="300" height="70"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Button" image="complete"/>
                                         <connections>
                                             <action selector="shoppingButtonTapped:" destination="hOr-M5-GhS" eventType="touchUpInside" id="jZm-09-37z"/>
                                         </connections>
@@ -344,6 +344,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="complete" width="512" height="512"/>
         <image name="incomplete" width="512" height="512"/>
     </resources>
 </document>

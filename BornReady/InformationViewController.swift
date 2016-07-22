@@ -33,6 +33,7 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
         sectionLabel.font = UIFont(name: "Aller-Regular", size: 18)
         taskLabel.text = task?.text
         taskLabel.font = UIFont(name: "Aller-Regular", size: 16)
+        setUpShoppingButtonImage()
     }
     
     func setUpIsCompleteButtonImage() {
@@ -41,6 +42,15 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
             isCompleteButton.setImage(UIImage(named: "complete"), forState: .Normal)
         } else {
             isCompleteButton.setImage(UIImage(named: "incomplete"), forState: .Normal)
+        }
+    }
+    
+    func setUpShoppingButtonImage() {
+        guard let taskLink = task?.link else { return }
+        
+        if taskLink == "" {
+            shoppingButton.enabled = false
+            shoppingButton.setImage(UIImage(named: "incomplete"), forState: .Normal)
         }
     }
     
