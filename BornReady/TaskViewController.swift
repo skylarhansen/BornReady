@@ -37,16 +37,16 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
         self.navigationItem.title = room?.name.uppercaseString
         
-//        guard let room = room else { return }
-//        switch room.name {
-//        case "kitchen":
-//            self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green: 216/255, blue: 93/255, alpha: 1.0)
-//        case "livingRoom":
-//            self.navigationController?.navigationBar.barTintColor = UIColor(red: 200/255, green: 130/255, blue: 102/255, alpha: 1.0)
-//            
-//        default:
-//            break
-//        }
+        guard let room = room else { return }
+        switch room.name {
+        case "Kitchen":
+            self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green: 216/255, blue: 93/255, alpha: 1.0)
+        case "Living Room":
+            self.navigationController?.navigationBar.barTintColor = UIColor(red: 200/255, green: 130/255, blue: 102/255, alpha: 1.0)
+            
+        default:
+            break
+        }
         
     }
     
