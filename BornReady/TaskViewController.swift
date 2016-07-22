@@ -36,7 +36,18 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
         self.navigationItem.title = room?.name.uppercaseString
-
+        
+//        guard let room = room else { return }
+//        switch room.name {
+//        case "kitchen":
+//            self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green: 216/255, blue: 93/255, alpha: 1.0)
+//        case "livingRoom":
+//            self.navigationController?.navigationBar.barTintColor = UIColor(red: 200/255, green: 130/255, blue: 102/255, alpha: 1.0)
+//            
+//        default:
+//            break
+//        }
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -80,6 +91,8 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
         return 35
     }
     
+    
+    
     // TaskTableViewCellDelegate function
     
     func taskCellIsCompleteButtonTapped(sender: TaskTableViewCell) {
@@ -91,11 +104,11 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
         taskListTableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
     }
     
-     // MARK: - Navigation
+    // MARK: - Navigation
     
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toTaskInfo",
-        let indexPath = taskListTableView.indexPathForSelectedRow {
+            let indexPath = taskListTableView.indexPathForSelectedRow {
             let infoVC = segue.destinationViewController as? InformationViewController
             let task = sections[indexPath.section][indexPath.row]
             infoVC?.task = task

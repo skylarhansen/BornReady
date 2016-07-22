@@ -24,6 +24,9 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
         
         setUpLabelOutlets()
         setUpIsCompleteButtonImage()
+        
+        tipsTableView.estimatedRowHeight = 100
+        tipsTableView.rowHeight = UITableViewAutomaticDimension
     }
     
     // functions to update outlets
@@ -108,9 +111,4 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
         
         return cell
     }
-    
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 50
-    }
-    
 }
