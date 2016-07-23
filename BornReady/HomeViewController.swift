@@ -25,9 +25,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
-        
-        //        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        //        self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.translucent = false
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.init(red: 67/255, green: 67/255, blue: 67/255, alpha: 1.0), NSFontAttributeName: UIFont(name: "Aller-Regular", size: 20)!]
@@ -51,6 +48,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         if let cell = tableView.dequeueReusableCellWithIdentifier("roomCell") as? RoomTableViewCell {
             let room = TaskController.sharedController.rooms[indexPath.row]
             cell.updateWith(room)
+            cell.textLabel?.textColor = UIColor(red: 89/255, green: 89/255, blue: 89/255, alpha: 1.0)
             return cell
         } else {
             return RoomTableViewCell()

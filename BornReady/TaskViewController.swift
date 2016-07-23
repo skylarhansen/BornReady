@@ -89,7 +89,7 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
             break
         }
     }
-
+    
     // MARK: - UITableViewDataSource Functions
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -108,6 +108,7 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.updateWith(task)
         cell.delegate = self
         cell.accessoryView = UIImageView.init(image: UIImage(named: "chevron"))
+        cell.taskLabel.textColor = UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1.0)
         
         if name == kKitchen {
             cell.backgroundColor = UIColor(red: 255/255, green: 230/255, blue: 153/255, alpha: 1.0)
@@ -133,7 +134,7 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         taskListTableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
-
+    
     // customize sections
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

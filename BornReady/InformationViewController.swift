@@ -98,8 +98,10 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
     func setUpLabelOutlets() {
         sectionLabel.text = task?.section.uppercaseString
         sectionLabel.font = UIFont(name: "Aller-Regular", size: 18)
+        sectionLabel.textColor = UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1.0)
         taskLabel.text = task?.text
         taskLabel.font = UIFont(name: "Aller-Regular", size: 16)
+        taskLabel.textColor = UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1.0)
         setUpShoppingButtonImage()
     }
     
@@ -172,6 +174,8 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
         
         cell.textLabel?.text = tip.text
         cell.textLabel?.font = UIFont(name: "Aller-Regular", size: 16)
+        cell.textLabel?.textColor = UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1.0)
+        
         
         return cell
     }

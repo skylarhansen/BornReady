@@ -18,10 +18,10 @@ class TaskTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -32,7 +32,7 @@ class TaskTableViewCell: UITableViewCell {
             isCompleteButton.setImage(UIImage(named: "incomplete"), forState: .Normal)
         }
     }
-
+    
     // MARK: - Action buttons
     
     @IBAction func isCompleteButtonTapped(sender: AnyObject) {
