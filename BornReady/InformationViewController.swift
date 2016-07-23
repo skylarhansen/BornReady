@@ -18,18 +18,73 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var shoppingButton: UIButton!
     @IBOutlet weak var tipsTableView: UITableView!
+    @IBOutlet weak var lineView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUpBackgroundColors()
         setUpLabelOutlets()
         setUpIsCompleteButtonImage()
         
         tipsTableView.estimatedRowHeight = 100
         tipsTableView.rowHeight = UITableViewAutomaticDimension
+        
+        shareButton.backgroundColor = UIColor.whiteColor()
+        shoppingButton.backgroundColor = UIColor.whiteColor()
     }
     
     // functions to update outlets
+    
+    func setUpBackgroundColors() {
+        guard let task = task,
+        let room = task.room else { return }
+        
+        switch room.name {
+        case "Kitchen":
+            view.backgroundColor = UIColor(red: 255/255, green: 216/255, blue: 93/255, alpha: 1.0)
+            taskLabel.backgroundColor = UIColor(red: 255/255, green: 230/255, blue: 153/255, alpha: 1.0)
+            isCompleteButton.backgroundColor = UIColor(red: 255/255, green: 230/255, blue: 153/255, alpha: 1.0)
+            lineView.backgroundColor = UIColor(red: 255/255, green: 230/255, blue: 153/255, alpha: 1.0)
+        case "Living Room":
+            view.backgroundColor = UIColor(red: 200/255, green: 130/255, blue: 102/255, alpha: 1.0)
+            taskLabel.backgroundColor = UIColor(red: 222/255, green: 179/255, blue: 162/255, alpha: 1.0)
+            isCompleteButton.backgroundColor = UIColor(red: 222/255, green: 179/255, blue: 162/255, alpha: 1.0)
+            lineView.backgroundColor = UIColor(red: 222/255, green: 179/255, blue: 162/255, alpha: 1.0)
+        case "Nursery & Bedroom":
+            view.backgroundColor = UIColor(red: 104/255, green: 170/255, blue: 172/255, alpha: 1.0)
+            taskLabel.backgroundColor = UIColor(red: 188/255, green: 217/255, blue: 218/255, alpha: 1.0)
+            isCompleteButton.backgroundColor = UIColor(red: 188/255, green: 217/255, blue: 218/255, alpha: 1.0)
+            lineView.backgroundColor = UIColor(red: 188/255, green: 217/255, blue: 218/255, alpha: 1.0)
+        case "Garage":
+            view.backgroundColor = UIColor(red: 239/255, green: 134/255, blue: 87/255, alpha: 1.0)
+            taskLabel.backgroundColor = UIColor(red: 253/255, green: 169/255, blue: 123/255, alpha: 1.0)
+            isCompleteButton.backgroundColor = UIColor(red: 253/255, green: 169/255, blue: 123/255, alpha: 1.0)
+            lineView.backgroundColor = UIColor(red: 253/255, green: 169/255, blue: 123/255, alpha: 1.0)
+        case "Bathroom":
+            view.backgroundColor = UIColor(red: 213/255, green: 147/255, blue: 171/255, alpha: 1.0)
+            taskLabel.backgroundColor = UIColor(red: 230/255, green: 192/255, blue: 206/255, alpha: 1.0)
+            isCompleteButton.backgroundColor = UIColor(red: 230/255, green: 192/255, blue: 206/255, alpha: 1.0)
+            lineView.backgroundColor = UIColor(red: 230/255, green: 192/255, blue: 206/255, alpha: 1.0)
+        case "Outdoors":
+            view.backgroundColor = UIColor(red: 96/255, green: 210/255, blue: 123/255, alpha: 1.0)
+            taskLabel.backgroundColor = UIColor(red: 147/255, green: 241/255, blue: 169/255, alpha: 1.0)
+            isCompleteButton.backgroundColor = UIColor(red: 147/255, green: 241/255, blue: 169/255, alpha: 1.0)
+            lineView.backgroundColor = UIColor(red: 147/255, green: 241/255, blue: 169/255, alpha: 1.0)
+        case "Laundry Room":
+            view.backgroundColor = UIColor(red: 59/255, green: 184/255, blue: 187/255, alpha: 1.0)
+            taskLabel.backgroundColor = UIColor(red: 127/255, green: 213/255, blue: 215/255, alpha: 1.0)
+            isCompleteButton.backgroundColor = UIColor(red: 127/255, green: 213/255, blue: 215/255, alpha: 1.0)
+            lineView.backgroundColor = UIColor(red: 127/255, green: 213/255, blue: 215/255, alpha: 1.0)
+        case "General":
+            view.backgroundColor = UIColor(red: 255/255, green: 144/255, blue: 83/255, alpha: 1.0)
+            taskLabel.backgroundColor = UIColor(red: 255/255, green: 191/255, blue: 155/255, alpha: 1.0)
+            isCompleteButton.backgroundColor = UIColor(red: 255/255, green: 191/255, blue: 155/255, alpha: 1.0)
+            lineView.backgroundColor = UIColor(red: 255/255, green: 191/255, blue: 155/255, alpha: 1.0)
+        default:
+            break
+        }
+    }
     
     func setUpLabelOutlets() {
         sectionLabel.text = task?.section.uppercaseString

@@ -36,6 +36,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1.0)
+    }
+    
     // MARK: - UITableViewDataSource Functions
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

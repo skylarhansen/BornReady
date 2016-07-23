@@ -29,5 +29,4 @@ class RoomTableViewCell: UITableViewCell {
         roomLabel.text = room.name
         roomLabel.font = UIFont(name: "Aller-Regular", size: 24)
     }
-
 }

@@ -31,12 +31,23 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUpColors()
+        
         taskListTableView.estimatedRowHeight = 100
         taskListTableView.rowHeight = UITableViewAutomaticDimension
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
         self.navigationItem.title = room?.name.uppercaseString
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        taskListTableView.reloadData()
+    }
+    
+    // set up colors
+    
+    func setUpColors() {
         guard let room = room else { return }
         switch room.name {
         case "Kitchen":
@@ -58,12 +69,6 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
         default:
             break
         }
-        
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        taskListTableView.reloadData()
     }
     
     // MARK: - UITableViewDataSource Functions
