@@ -10,6 +10,16 @@ import UIKit
 
 class TaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TaskTableViewCellDelegate {
     
+    private let kKitchen = "Kitchen"
+    private let kLiving = "Living Room"
+    private let kNursery = "Nursery & Bedroom"
+    private let kGarage = "Garage"
+    private let kBathroom = "Bathroom"
+    private let kOutdoors = "Outdoors"
+    private let kLaundry = "Laundry Room"
+    private let kGeneral = "General"
+    
+    
     @IBOutlet weak var taskListTableView: UITableView!
     
     var room: Room?
@@ -49,28 +59,29 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func setUpColors() {
         guard let room = room else { return }
+        
         switch room.name {
-        case "Kitchen":
+        case kKitchen:
             self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green: 216/255, blue: 93/255, alpha: 1.0)
-        case "Living Room":
+        case kLiving:
             self.navigationController?.navigationBar.barTintColor = UIColor(red: 200/255, green: 130/255, blue: 102/255, alpha: 1.0)
-        case "Nursery & Bedroom":
+        case kNursery:
             self.navigationController?.navigationBar.barTintColor = UIColor(red: 104/255, green: 170/255, blue: 172/255, alpha: 1.0)
-        case "Garage":
+        case kGarage:
             self.navigationController?.navigationBar.barTintColor = UIColor(red: 239/255, green: 134/255, blue: 87/255, alpha: 1.0)
-        case "Bathroom":
+        case kBathroom:
             self.navigationController?.navigationBar.barTintColor = UIColor(red: 213/255, green: 147/255, blue: 171/255, alpha: 1.0)
-        case "Outdoors":
+        case kOutdoors:
             self.navigationController?.navigationBar.barTintColor = UIColor(red: 96/255, green: 210/255, blue: 123/255, alpha: 1.0)
-        case "Laundry Room":
+        case kLaundry:
             self.navigationController?.navigationBar.barTintColor = UIColor(red: 59/255, green: 184/255, blue: 187/255, alpha: 1.0)
-        case "General":
+        case kGeneral:
             self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green: 144/255, blue: 83/255, alpha: 1.0)
         default:
             break
         }
     }
-    
+
     // MARK: - UITableViewDataSource Functions
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -84,15 +95,36 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("taskCell") as? TaskTableViewCell ?? TaskTableViewCell()
         let task = sections[indexPath.section][indexPath.row]
+        let name = room?.name
+        
         cell.updateWith(task)
         cell.delegate = self
+        
+        if name == kKitchen {
+            cell.backgroundColor = UIColor(red: 255/255, green: 230/255, blue: 153/255, alpha: 1.0)
+        } else if name == kLiving {
+            cell.backgroundColor = UIColor(red: 222/255, green: 179/255, blue: 162/255, alpha: 1.0)
+        } else if name == kNursery {
+            cell.backgroundColor = UIColor(red: 188/255, green: 217/255, blue: 218/255, alpha: 1.0)
+        } else if name == kGarage {
+            cell.backgroundColor = UIColor(red: 253/255, green: 169/255, blue: 123/255, alpha: 1.0)
+        } else if name == kBathroom {
+            cell.backgroundColor = UIColor(red: 230/255, green: 192/255, blue: 206/255, alpha: 1.0)
+        } else if name == kOutdoors {
+            cell.backgroundColor = UIColor(red: 147/255, green: 241/255, blue: 169/255, alpha: 1.0)
+        } else if name == kLaundry {
+            cell.backgroundColor = UIColor(red: 127/255, green: 213/255, blue: 215/255, alpha: 1.0)
+        } else if name == kGeneral {
+            cell.backgroundColor = UIColor(red: 255/255, green: 191/255, blue: 155/255, alpha: 1.0)
+        }
+        
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         taskListTableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
-    
+
     // customize sections
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -106,8 +138,6 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 35
     }
-    
-    
     
     // TaskTableViewCellDelegate function
     
