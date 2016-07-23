@@ -99,6 +99,7 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.updateWith(task)
         cell.delegate = self
+        cell.accessoryView = UIImageView.init(image: UIImage(named: "chevron"))
         
         if name == kKitchen {
             cell.backgroundColor = UIColor(red: 255/255, green: 230/255, blue: 153/255, alpha: 1.0)
