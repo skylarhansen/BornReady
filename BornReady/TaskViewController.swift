@@ -149,18 +149,34 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        view.tintColor = UIColor.redColor()
+        guard let room = room else { return }
         
+        let headerText: UITableViewHeaderFooterView = view as! UITableViewHeaderFooterView
         
+        headerText.textLabel?.font = UIFont(name: "Aller-Regular", size: 18)
+        headerText.textLabel?.textColor = UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1.0)
+        
+        switch room.name {
+        case kKitchen:
+            view.tintColor = UIColor(red: 255/255, green: 216/255, blue: 93/255, alpha: 1.0)
+        case kLiving:
+            view.tintColor = UIColor(red: 200/255, green: 130/255, blue: 102/255, alpha: 1.0)
+        case kNursery:
+            view.tintColor = UIColor(red: 104/255, green: 170/255, blue: 172/255, alpha: 1.0)
+        case kGarage:
+            view.tintColor = UIColor(red: 239/255, green: 134/255, blue: 87/255, alpha: 1.0)
+        case kBathroom:
+            view.tintColor = UIColor(red: 213/255, green: 147/255, blue: 171/255, alpha: 1.0)
+        case kOutdoors:
+            view.tintColor = UIColor(red: 96/255, green: 210/255, blue: 123/255, alpha: 1.0)
+        case kLaundry:
+            view.tintColor = UIColor(red: 59/255, green: 184/255, blue: 187/255, alpha: 1.0)
+        case kGeneral:
+            view.tintColor = UIColor(red: 255/255, green: 144/255, blue: 83/255, alpha: 1.0)
+        default:
+            break
+        }
     }
-    
-//    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let headerView = UIView(frame: CGRectMake(0, 0, tableView.bounds.size.width, 35))
-//        
-//            headerView.backgroundColor = UIColor.redColor()
-//       
-//        return headerView
-//    }
     
     // TaskTableViewCellDelegate function
     
