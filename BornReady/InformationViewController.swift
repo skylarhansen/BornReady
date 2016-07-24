@@ -119,7 +119,7 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
         
         if taskLink == "" {
             shoppingButton.enabled = false
-            shoppingButton.setImage(UIImage(named: "incomplete"), forState: .Normal)
+            shoppingButton.setImage(UIImage(named: "shoppingButtonInactive"), forState: .Normal)
         }
     }
     
