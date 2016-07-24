@@ -53,6 +53,7 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         taskListTableView.reloadData()
+        setUpColors() // this goes here so navigation bar doesn't change colors if you start to swipe back to previous page but change your mind 
     }
     
     // set up colors
@@ -64,27 +65,35 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
         case kKitchen:
             self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green: 216/255, blue: 93/255, alpha: 1.0)
             taskListTableView.separatorColor = UIColor(red: 255/255, green: 216/255, blue: 93/255, alpha: 1.0)
+            taskListTableView.backgroundColor = UIColor(red: 255/255, green: 216/255, blue: 93/255, alpha: 1.0)
         case kLiving:
             self.navigationController?.navigationBar.barTintColor = UIColor(red: 200/255, green: 130/255, blue: 102/255, alpha: 1.0)
             taskListTableView.separatorColor = UIColor(red: 200/255, green: 130/255, blue: 102/255, alpha: 1.0)
+            taskListTableView.backgroundColor = UIColor(red: 200/255, green: 130/255, blue: 102/255, alpha: 1.0)
         case kNursery:
             self.navigationController?.navigationBar.barTintColor = UIColor(red: 104/255, green: 170/255, blue: 172/255, alpha: 1.0)
             taskListTableView.separatorColor = UIColor(red: 104/255, green: 170/255, blue: 172/255, alpha: 1.0)
+            taskListTableView.backgroundColor = UIColor(red: 104/255, green: 170/255, blue: 172/255, alpha: 1.0)
         case kGarage:
             self.navigationController?.navigationBar.barTintColor = UIColor(red: 239/255, green: 134/255, blue: 87/255, alpha: 1.0)
             taskListTableView.separatorColor = UIColor(red: 239/255, green: 134/255, blue: 87/255, alpha: 1.0)
+            taskListTableView.backgroundColor = UIColor(red: 239/255, green: 134/255, blue: 87/255, alpha: 1.0)
         case kBathroom:
             self.navigationController?.navigationBar.barTintColor = UIColor(red: 213/255, green: 147/255, blue: 171/255, alpha: 1.0)
             taskListTableView.separatorColor = UIColor(red: 213/255, green: 147/255, blue: 171/255, alpha: 1.0)
+            taskListTableView.backgroundColor = UIColor(red: 213/255, green: 147/255, blue: 171/255, alpha: 1.0)
         case kOutdoors:
             self.navigationController?.navigationBar.barTintColor = UIColor(red: 96/255, green: 210/255, blue: 123/255, alpha: 1.0)
             taskListTableView.separatorColor = UIColor(red: 96/255, green: 210/255, blue: 123/255, alpha: 1.0)
+            taskListTableView.backgroundColor = UIColor(red: 96/255, green: 210/255, blue: 123/255, alpha: 1.0)
         case kLaundry:
             self.navigationController?.navigationBar.barTintColor = UIColor(red: 59/255, green: 184/255, blue: 187/255, alpha: 1.0)
             taskListTableView.separatorColor = UIColor(red: 59/255, green: 184/255, blue: 187/255, alpha: 1.0)
+            taskListTableView.backgroundColor = UIColor(red: 59/255, green: 184/255, blue: 187/255, alpha: 1.0)
         case kGeneral:
             self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green: 144/255, blue: 83/255, alpha: 1.0)
             taskListTableView.separatorColor = UIColor(red: 255/255, green: 144/255, blue: 83/255, alpha: 1.0)
+            taskListTableView.backgroundColor = UIColor(red: 255/255, green: 144/255, blue: 83/255, alpha: 1.0)
         default:
             break
         }
