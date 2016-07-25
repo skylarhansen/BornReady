@@ -28,6 +28,7 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var shoppingButton: UIButton!
     @IBOutlet weak var tipsTableView: UITableView!
     @IBOutlet weak var lineView: UIView!
+    @IBOutlet weak var taskStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -166,15 +167,13 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("tipCell", forIndexPath: indexPath)
+        guard let cell = tableView.dequeueReusableCellWithIdentifier("tipCell", forIndexPath: indexPath) as? TipsTableViewCell else { return TipsTableViewCell() }
         
         guard let task = task,
-            tips = task.tips,
-            let tip = tips[indexPath.row] as? Tip else { return UITableViewCell() }
+        tips = task.tips,
+            tip = tips[indexPath.row] else { return }
         
-        cell.textLabel?.text = tip.text
-        cell.textLabel?.font = UIFont(name: "Aller-Regular", size: 16)
-        cell.textLabel?.textColor = UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1.0)
+        
         
         
         return cell
