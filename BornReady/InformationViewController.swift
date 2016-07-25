@@ -178,7 +178,7 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
         
         guard let task = task?.text else { return }
         
-        let string = "Check out this baby-proofing tip: \"\(task)\""
+        let string = "Check out this baby-proofing tip:\n\"\(task)\""
         
         let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
         
