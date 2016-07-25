@@ -23,7 +23,7 @@ class TipsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func updateLabel(tip: Tip) {
+    func updateWith(tip: Tip) {
         tipLabel.text = tip.text
         tipLabel.font = UIFont(name: "Aller-Regular", size: 16)
         tipLabel.textColor = UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1.0)
