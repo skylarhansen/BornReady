@@ -18,9 +18,8 @@ class TaskController {
     var rooms: [Room] {
         let fetchRequest = NSFetchRequest(entityName: "Room")
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-        
         fetchRequest.sortDescriptors = [sortDescriptor]
-        return (try? Stack.sharedStack.managedObjectContext.executeFetchRequest(fetchRequest)) as? [Room] ?? []
+        return sortRooms((try? Stack.sharedStack.managedObjectContext.executeFetchRequest(fetchRequest)) as? [Room] ?? [])
     }
     
     var tasks: [Task] {
@@ -28,6 +27,34 @@ class TaskController {
         let sortDescriptor = NSSortDescriptor(key: "text", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         return (try? Stack.sharedStack.managedObjectContext.executeFetchRequest(fetchRequest)) as? [Task] ?? []
+    }
+    
+    func sortRooms(rooms: [Room]) -> [Room] {
+        var roomArray = [Room]()
+        
+        for room in rooms {
+            switch room.name {
+            case "Bathroom":
+                roomArray.insert(room, atIndex: 0)
+            case "Garage":
+                roomArray.insert(room, atIndex: 0)
+            case "General":
+                roomArray.insert(room, atIndex: 2)
+            case "Kitchen":
+                roomArray.insert(room, atIndex: 0)
+            case "Laundry Room":
+                roomArray.insert(room, atIndex: 3)
+            case "Living Room":
+                roomArray.insert(room, atIndex: 1)
+            case "Nursery & Bedroom":
+                roomArray.insert(room, atIndex: 2)
+            case "Outdoors":
+                roomArray.insert(room, atIndex: 5)
+            default:
+                break
+            }
+        }
+        return roomArray
     }
     
     func serializeJSON(completion: (rooms: [Room]) -> Void) {
