@@ -30,7 +30,7 @@ class TaskController {
     }
     
     func sortRooms(rooms: [Room]) -> [Room] {
-        var roomArray = [Room]()
+        var roomArray: [Room] = []
         
         for room in rooms {
             switch room.name {
