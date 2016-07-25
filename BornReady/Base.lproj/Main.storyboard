@@ -278,7 +278,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ys-sm-bBD">
-                                <rect key="frame" x="25" y="64" width="575" height="35"/>
+                                <rect key="frame" x="15" y="64" width="585" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="KDn-EJ-tQO"/>
                                 </constraints>
@@ -299,7 +299,7 @@
                             <constraint firstItem="3ys-sm-bBD" firstAttribute="top" secondItem="tr8-dX-wea" secondAttribute="bottom" id="MjF-Wl-d91"/>
                             <constraint firstItem="lJl-F7-NaG" firstAttribute="leading" secondItem="FYS-La-cu7" secondAttribute="trailing" id="R79-Sd-Bn2"/>
                             <constraint firstItem="Jni-Gg-FC5" firstAttribute="leading" secondItem="2uP-il-rk2" secondAttribute="leading" id="RTK-xx-uHm"/>
-                            <constraint firstItem="3ys-sm-bBD" firstAttribute="leading" secondItem="2uP-il-rk2" secondAttribute="leading" constant="25" id="Sez-gJ-fGr"/>
+                            <constraint firstItem="3ys-sm-bBD" firstAttribute="leading" secondItem="2uP-il-rk2" secondAttribute="leading" constant="15" id="Sez-gJ-fGr"/>
                             <constraint firstAttribute="trailing" secondItem="lJl-F7-NaG" secondAttribute="trailing" id="Uim-Rh-VNt"/>
                             <constraint firstItem="5yq-nz-OVU" firstAttribute="top" secondItem="Jni-Gg-FC5" secondAttribute="bottom" id="YUt-c0-sho"/>
                             <constraint firstItem="166-nL-GkS" firstAttribute="leading" secondItem="2uP-il-rk2" secondAttribute="leading" id="b6D-f8-iY5"/>
