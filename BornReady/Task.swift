@@ -17,21 +17,7 @@ class Task: NSManagedObject {
     private static let kSection = "section"
     private static let kLink = "link"
     
-    convenience init(text: String, section: String, isComplete: Bool = false, link: String, context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
-        
-        guard let entity = NSEntityDescription.entityForName(Task.kType, inManagedObjectContext: context) else { fatalError("Error: Core Data failed to create entity from entity description.") }
-        
-        self.init(entity: entity, insertIntoManagedObjectContext: context)
-        
-        self.text = text
-        self.isComplete = isComplete
-        self.link = link
-        self.section = section
-        self.tips = []
-        self.room = nil
-    }
     
-    // JSON init
     convenience init?(dictionary: [String:AnyObject], context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
         guard let entity = NSEntityDescription.entityForName(Task.kType, inManagedObjectContext: context),
             text = dictionary[Task.kText] as? String,
@@ -48,7 +34,5 @@ class Task: NSManagedObject {
         let tips = tipDictionaries.flatMap { Tip(dictionary: $0) }
         self.tips = NSOrderedSet(array: tips)
         self.room = nil
-        
-        //        tips.flatMap { print($0.text) }
     }
 }

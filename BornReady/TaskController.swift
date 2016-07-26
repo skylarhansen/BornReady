@@ -13,8 +13,6 @@ class TaskController {
     
     static let sharedController = TaskController()
     
-    var room: Room?
-    
     var rooms: [Room] {
         let fetchRequest = NSFetchRequest(entityName: "Room")
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)

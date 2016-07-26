@@ -15,18 +15,7 @@ class Room: NSManagedObject {
     private static let kName = "name"
     private static let kImage = "image"
     
-    // Back-up init in case unable to make object from JSON
-    convenience init(name: String, imageString: String, context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
-        guard let entity = NSEntityDescription.entityForName(Room.kType, inManagedObjectContext: context) else { fatalError("Error: Core Data failed to create entity from entity description.") }
-        
-        self.init(entity: entity, insertIntoManagedObjectContext: context)
-        
-        self.name = name
-        self.imageString = imageString
-        self.tasks = []
-    }
     
-    // JSON init
     convenience init?(dictionary: [String:AnyObject], context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
         guard let entity = NSEntityDescription.entityForName(Room.kType, inManagedObjectContext: context),
             name = dictionary[Room.kName] as? String,
@@ -42,5 +31,3 @@ class Room: NSManagedObject {
     }
 }
 
-
-// how to initialize json stuff and core data stuff, specifically with imageData: NSData vs image: String
