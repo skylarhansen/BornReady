@@ -39,10 +39,16 @@
                                                                 <constraint firstAttribute="width" secondItem="e6C-Oe-7e9" secondAttribute="height" multiplier="1:1" id="DLc-8n-CDw"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDn-nG-LQc">
-                                                            <rect key="frame" x="52" y="0.0" width="532" height="44"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDn-nG-LQc">
+                                                            <rect key="frame" x="52" y="0.0" width="482" height="44"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.34901960784313724" green="0.34901960784313724" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42P-ck-zgc">
+                                                            <rect key="frame" x="542" y="0.0" width="42" height="44"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -57,6 +63,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="progressLabel" destination="42P-ck-zgc" id="TYD-Ai-Sm7"/>
                                             <outlet property="roomImageView" destination="e6C-Oe-7e9" id="zFF-eW-zxc"/>
                                             <outlet property="roomLabel" destination="YDn-nG-LQc" id="c2q-kK-dwP"/>
                                             <segue destination="UMu-3d-Oar" kind="show" identifier="toTaskList" id="E2D-O3-VzA"/>

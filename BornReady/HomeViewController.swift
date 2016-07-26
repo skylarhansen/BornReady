@@ -35,6 +35,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1.0)
+        roomListTableView.reloadData()
     }
     
     // MARK: - UITableViewDataSource Functions
@@ -48,7 +49,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         if let cell = tableView.dequeueReusableCellWithIdentifier("roomCell") as? RoomTableViewCell {
             let room = TaskController.sharedController.rooms[indexPath.row]
             cell.updateWith(room)
-            cell.textLabel?.textColor = UIColor(red: 89/255, green: 89/255, blue: 89/255, alpha: 1.0)
+            cell.roomLabel.textColor = UIColor(red: 89/255, green: 89/255, blue: 89/255, alpha: 1.0)
+            cell.progressLabel.textColor = UIColor(red: 89/255, green: 89/255, blue: 89/255, alpha: 1.0)
             return cell
         } else {
             return RoomTableViewCell()

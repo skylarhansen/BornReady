@@ -12,6 +12,7 @@ class RoomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var roomImageView: UIImageView!
     @IBOutlet weak var roomLabel: UILabel!
+    @IBOutlet weak var progressLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,5 +29,10 @@ class RoomTableViewCell: UITableViewCell {
         roomImageView.image = UIImage(named: room.imageString)
         roomLabel.text = room.name
         roomLabel.font = UIFont(name: "Aller-Regular", size: 24)
+        var tasksCompleted: [Task]
+        tasksCompleted = TaskController.sharedController.completedTasks(room)
+        guard let tasks = room.tasks else { return }
+        progressLabel.text = "\(tasksCompleted.count)/\(tasks.count)"
+        progressLabel.font = UIFont(name: "Aller-Regular", size: 16)
     }
 }

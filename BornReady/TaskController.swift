@@ -29,6 +29,20 @@ class TaskController {
         return (try? Stack.sharedStack.managedObjectContext.executeFetchRequest(fetchRequest)) as? [Task] ?? []
     }
     
+    func completedTasks(room: Room) -> [Task] {
+        let tasks = room.tasks ?? []
+        var tasksInRoom: [Task] = []
+        
+        for task in tasks {
+            if let task = task as? Task {
+                tasksInRoom.append(task)
+            }
+        }
+        let completedTasksInRoom = tasksInRoom.filter({$0.isComplete.boolValue})
+        
+        return completedTasksInRoom
+    }
+    
     func sortRooms(rooms: [Room]) -> [Room] {
         var roomArray: [Room] = []
         
