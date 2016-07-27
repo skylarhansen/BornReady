@@ -38,7 +38,7 @@ class RoomTableViewCell: UITableViewCell {
     }
     
     func changeSizeOfProgressBar() {
-       // progressBar.transform = CGAffineTransformMakeScale(1, 8)
+        progressBar.transform = CGAffineTransformMakeScale(1, 8)
     }
     
     func changeColorOfProgressBar(room: Room) {
