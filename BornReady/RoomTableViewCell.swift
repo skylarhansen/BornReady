@@ -41,6 +41,15 @@ class RoomTableViewCell: UITableViewCell {
         progressBar.transform = CGAffineTransformMakeScale(1, 8)
     }
     
+    func setProgress(room: Room) {
+        guard let tasks = room.tasks else { return }
+        let completedTasksFloatValue = Float(TaskController.sharedController.completedTasks(room).count)
+        let totalTasksFloatValue = Float(tasks.count)
+        let fractionalProgress = completedTasksFloatValue / totalTasksFloatValue
+        
+        progressBar.setProgress(fractionalProgress, animated: false)
+    }
+    
     func changeColorOfProgressBar(room: Room) {
         switch room.name {
         case kKitchen:
@@ -74,5 +83,6 @@ class RoomTableViewCell: UITableViewCell {
         progressLabel.text = "\(tasksCompleted.count)/\(tasks.count)"
         progressLabel.font = UIFont(name: "Aller-Regular", size: 16)
         changeColorOfProgressBar(room)
+        setProgress(room)
     }
 }
