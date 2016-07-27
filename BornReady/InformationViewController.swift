@@ -19,8 +19,6 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
     private let kLaundry = "Laundry Room"
     private let kGeneral = "General"
     
-    var task: Task?
-    
     @IBOutlet weak var sectionLabel: UILabel!
     @IBOutlet weak var taskLabel: UILabel!
     @IBOutlet weak var isCompleteButton: UIButton!
@@ -31,8 +29,13 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var taskView: UIView!
     @IBOutlet weak var sectionView: UIView!
     
+    var task: Task?
+    
+    
+    // MARK: - UIViewController Lifecyle
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         setUpBackgroundColors()
@@ -46,13 +49,40 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
         shoppingButton.backgroundColor = UIColor.whiteColor()
     }
     
-    // functions to update outlets
+    
+    // MARK: - UITableViewDataSource Functions
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        guard let task = task,
+            tips = task.tips else { return 0 }
+        
+        return tips.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("tipCell", forIndexPath: indexPath) as? TipsTableViewCell ?? TipsTableViewCell()
+        
+        guard let task = task,
+            tips = task.tips,
+            let tip = tips[indexPath.row] as? Tip else { return UITableViewCell() }
+        
+        cell.updateWith(tip)
+        
+        return cell
+    }
+    
+    
+    // MARK: - Custom Functions
     
     func setUpBackgroundColors() {
+        
         guard let task = task,
             let room = task.room else { return }
         
         switch room.name {
+            
         case kKitchen:
             view.backgroundColor = UIColor(red: 255/255, green: 230/255, blue: 153/255, alpha: 1.0)
             taskLabel.backgroundColor = UIColor(red: 255/255, green: 230/255, blue: 153/255, alpha: 1.0)
@@ -123,6 +153,7 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func setUpLabelOutlets() {
+        
         sectionLabel.text = task?.section.uppercaseString
         sectionLabel.font = UIFont(name: "Aller-Regular", size: 18)
         sectionLabel.textColor = UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1.0)
@@ -130,6 +161,7 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
         taskLabel.text = task?.text
         taskLabel.font = UIFont(name: "Aller-Regular", size: 16)
         taskLabel.textColor = UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1.0)
+        
         setUpShoppingButtonImage()
     }
     
@@ -143,6 +175,7 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func setUpShoppingButtonImage() {
+        
         guard let taskLink = task?.link else { return }
         
         if taskLink == "" {
@@ -151,6 +184,17 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
+    func presentActivityViewController() {
+        
+        guard let task = task?.text else { return }
+        
+        let string = "Check out this baby-proofing tip:\n\"\(task)\""
+        let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
+        
+        presentViewController(activityViewController, animated: true, completion: nil)
+    }
+    
+    
     // MARK: - Action Button
     
     @IBAction func isCompleteButtonTapped(sender: AnyObject) {
@@ -158,50 +202,20 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
         guard let task = task else { return }
         
         TaskController.sharedController.isCompleteValueToggled(task)
+        
         setUpIsCompleteButtonImage()
         
     }
     
     @IBAction func shareButtonTapped(sender: AnyObject) {
+        
         presentActivityViewController()
     }
     
     @IBAction func shoppingButtonTapped(sender: AnyObject) {
+        
         guard let task = task else  { return }
         
         UIApplication.sharedApplication().openURL(NSURL(string: task.link) ?? NSURL())
-    }
-    
-    // customize share button attributes
-    
-    func presentActivityViewController() {
-        
-        guard let task = task?.text else { return }
-        
-        let string = "Check out this baby-proofing tip:\n\"\(task)\""
-        
-        let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
-        
-        presentViewController(activityViewController, animated: true, completion: nil)
-    }
-    
-    // MARK: - UITableViewDataSource Functions
-    
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let task = task,
-            tips = task.tips else { return 0 }
-        return tips.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCellWithIdentifier("tipCell", forIndexPath: indexPath) as? TipsTableViewCell else { return TipsTableViewCell() }
-        
-        guard let task = task,
-            tips = task.tips,
-            let tip = tips[indexPath.row] as? Tip else { return UITableViewCell() }
-        
-        cell.updateWith(tip)
-        
-        return cell
     }
 }

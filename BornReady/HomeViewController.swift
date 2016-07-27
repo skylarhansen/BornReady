@@ -13,6 +13,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var roomListTableView: UITableView!
     
+    
     // MARK: - UIViewController Lifecycle
     
     override func viewDidLoad() {
@@ -41,6 +42,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         roomListTableView.reloadData()
     }
     
+    
     // MARK: - UITableViewDataSource Functions
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -50,19 +52,18 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCellWithIdentifier("roomCell") as? RoomTableViewCell {
-            let room = TaskController.sharedController.rooms[indexPath.row]
-            
-            cell.updateWith(room)
-            cell.changeSizeOfProgressBar()
-            cell.roomLabel.textColor = UIColor(red: 89/255, green: 89/255, blue: 89/255, alpha: 1.0)
-            cell.progressLabel.textColor = UIColor(red: 191/255, green: 191/255, blue: 191/255, alpha: 1.0)
-            
-            return cell
-        } else {
-            return RoomTableViewCell()
-        }
+        let cell = tableView.dequeueReusableCellWithIdentifier("roomCell") as? RoomTableViewCell ?? RoomTableViewCell()
+        let room = TaskController.sharedController.rooms[indexPath.row]
+        
+        cell.updateWith(room)
+        cell.changeSizeOfProgressBar()
+        cell.roomLabel.textColor = UIColor(red: 89/255, green: 89/255, blue: 89/255, alpha: 1.0)
+        cell.progressLabel.textColor = UIColor(red: 191/255, green: 191/255, blue: 191/255, alpha: 1.0)
+        
+        return cell
+        
     }
+    
     
     // MARK: - UITableViewDelegate Functions
     
@@ -70,6 +71,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return 80
     }
+    
     
     // MARK: - Navigation
     
