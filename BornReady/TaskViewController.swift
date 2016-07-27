@@ -36,7 +36,7 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
         return TaskController.makeSections(taskArray)
     }
     
-    // View Life Cycle
+    // MARK: - UIViewController Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,10 +53,8 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         taskListTableView.reloadData()
-        setUpColors() // this goes here so navigation bar doesn't change colors if you start to swipe back to previous page but change your mind 
+        setUpColors()
     }
-    
-    // set up colors
     
     func setUpColors() {
         guard let room = room else { return }
@@ -110,6 +108,7 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("taskCell") as? TaskTableViewCell ?? TaskTableViewCell()
         let task = sections[indexPath.section][indexPath.row]
         let name = room?.name

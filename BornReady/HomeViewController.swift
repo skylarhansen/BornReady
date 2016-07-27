@@ -13,7 +13,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var roomListTableView: UITableView!
     
+    // MARK: - UIViewController Lifecycle
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         let firstRun = NSUserDefaults.standardUserDefaults().boolForKey("firstRun") as Bool
@@ -26,7 +29,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
         self.navigationController?.navigationBar.translucent = false
-        
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.init(red: 67/255, green: 67/255, blue: 67/255, alpha: 1.0), NSFontAttributeName: UIFont(name: "Aller-Regular", size: 20)!]
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1.0)
         self.navigationController?.navigationBar.tintColor = UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1.0)
@@ -34,6 +36,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     override func viewWillAppear(animated: Bool) {
+        
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1.0)
         roomListTableView.reloadData()
     }
@@ -46,31 +49,32 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         if let cell = tableView.dequeueReusableCellWithIdentifier("roomCell") as? RoomTableViewCell {
             let room = TaskController.sharedController.rooms[indexPath.row]
+            
             cell.updateWith(room)
             cell.changeSizeOfProgressBar()
             cell.roomLabel.textColor = UIColor(red: 89/255, green: 89/255, blue: 89/255, alpha: 1.0)
             cell.progressLabel.textColor = UIColor(red: 89/255, green: 89/255, blue: 89/255, alpha: 1.0)
+            
             return cell
         } else {
             return RoomTableViewCell()
         }
     }
     
-    // Functions specific to how rows look
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        roomListTableView.deselectRowAtIndexPath(indexPath, animated: true)
-    }
+    // MARK: - UITableViewDelegate Functions
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 90
+        
+        return 85
     }
     
     // MARK: - Navigation
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
         if segue.identifier == "toTaskList",
             let indexPath = roomListTableView.indexPathForSelectedRow {
             let taskVC = segue.destinationViewController as? TaskViewController

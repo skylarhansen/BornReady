@@ -28,20 +28,18 @@ class RoomTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
     }
     
     func changeSizeOfProgressBar() {
         progressBar.transform = CGAffineTransformMakeScale(1, 3)
     }
     
-    func setProgress(room: Room) {
+    func setProgressOfCompletedTasks(room: Room) {
+        
         guard let tasks = room.tasks else { return }
         let completedTasksFloatValue = Float(TaskController.sharedController.completedTasks(room).count)
         let totalTasksFloatValue = Float(tasks.count)
@@ -51,6 +49,7 @@ class RoomTableViewCell: UITableViewCell {
     }
     
     func changeColorOfProgressBar(room: Room) {
+        
         switch room.name {
         case kKitchen:
             progressBar.progressTintColor = UIColor(red: 1.000, green: 0.847, blue: 0.400, alpha: 1.00)
@@ -74,15 +73,17 @@ class RoomTableViewCell: UITableViewCell {
     }
     
     func updateWith(room: Room) {
+        
         roomImageView.image = UIImage(named: room.imageString)
         roomLabel.text = room.name
-        roomLabel.font = UIFont(name: "Aller-Regular", size: 24)
-        var tasksCompleted: [Task]
-        tasksCompleted = TaskController.sharedController.completedTasks(room)
+        roomLabel.font = UIFont(name: "Aller-Regular", size: 20)
+        
+        let tasksCompleted = TaskController.sharedController.completedTasks(room)
         guard let tasks = room.tasks else { return }
+        
         progressLabel.text = "\(tasksCompleted.count)/\(tasks.count)"
         progressLabel.font = UIFont(name: "Aller-Regular", size: 16)
         changeColorOfProgressBar(room)
-        setProgress(room)
+        setProgressOfCompletedTasks(room)
     }
 }

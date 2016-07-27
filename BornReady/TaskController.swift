@@ -14,6 +14,7 @@ class TaskController {
     static let sharedController = TaskController()
     
     var rooms: [Room] {
+        
         let fetchRequest = NSFetchRequest(entityName: "Room")
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
@@ -21,6 +22,7 @@ class TaskController {
     }
     
     var tasks: [Task] {
+        
         let fetchRequest = NSFetchRequest(entityName: "Task")
         let sortDescriptor = NSSortDescriptor(key: "text", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
@@ -28,6 +30,7 @@ class TaskController {
     }
     
     func completedTasks(room: Room) -> [Task] {
+        
         let tasks = room.tasks ?? []
         var tasksInRoom: [Task] = []
         
@@ -36,12 +39,13 @@ class TaskController {
                 tasksInRoom.append(task)
             }
         }
-        let completedTasksInRoom = tasksInRoom.filter({$0.isComplete.boolValue})
         
+        let completedTasksInRoom = tasksInRoom.filter({$0.isComplete.boolValue})
         return completedTasksInRoom
     }
     
     func sortRooms(rooms: [Room]) -> [Room] {
+        
         var roomArray: [Room] = []
         
         for room in rooms {
@@ -84,11 +88,13 @@ class TaskController {
     }
     
     func isCompleteValueToggled(task: Task) {
+        
         task.isComplete = !task.isComplete.boolValue
         saveContext()
     }
     
     func saveContext() {
+        
         let moc = Stack.sharedStack.managedObjectContext
         do {
             try moc.save()
@@ -98,6 +104,7 @@ class TaskController {
     }
     
     static func makeSections(tasks: [Task]) -> [[Task]] {
+        
         var sectionNames: [String] = []
         var sections: [[Task]] = []
         for task in tasks {
@@ -105,6 +112,7 @@ class TaskController {
                 sectionNames.append(task.section)
             }
         }
+        
         for sectionName in sectionNames {
             let sectionArray = tasks.filter { $0.section == sectionName }
             sections.append(sectionArray)

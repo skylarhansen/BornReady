@@ -6,7 +6,7 @@
 //  Copyright © 2016 Skylar Hansen. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import CoreData
 
 class Room: NSManagedObject {
