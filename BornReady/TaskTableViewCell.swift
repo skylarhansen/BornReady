@@ -15,16 +15,6 @@ class TaskTableViewCell: UITableViewCell {
     @IBOutlet weak var isCompleteButton: UIButton!
     @IBOutlet weak var taskLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
-    
     func updateIsCompleteButton(isComplete: Bool) {
         if isComplete {
             isCompleteButton.setImage(UIImage(named: "complete"), forState: .Normal)

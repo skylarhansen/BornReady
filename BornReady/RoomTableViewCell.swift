@@ -26,14 +26,6 @@ class RoomTableViewCell: UITableViewCell {
     
     var room: Room?
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     func changeSizeOfProgressBar() {
         progressBar.transform = CGAffineTransformMakeScale(1, 3)
     }
