@@ -17,6 +17,7 @@ class Room: NSManagedObject {
     
     
     convenience init?(dictionary: [String:AnyObject], context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
+        
         guard let entity = NSEntityDescription.entityForName(Room.kType, inManagedObjectContext: context),
             name = dictionary[Room.kName] as? String,
             image = dictionary[Room.kImage] as? String  else { fatalError("Error: Core Data failed to create entity from entity description.") }

@@ -10,12 +10,13 @@ import UIKit
 
 class TaskTableViewCell: UITableViewCell {
     
-    var delegate: TaskTableViewCellDelegate?
-    
     @IBOutlet weak var isCompleteButton: UIButton!
     @IBOutlet weak var taskLabel: UILabel!
     
+    var delegate: TaskTableViewCellDelegate?
+    
     func updateIsCompleteButton(isComplete: Bool) {
+        
         if isComplete {
             isCompleteButton.setImage(UIImage(named: "complete"), forState: .Normal)
         } else {
@@ -26,17 +27,23 @@ class TaskTableViewCell: UITableViewCell {
     // MARK: - Action buttons
     
     @IBAction func isCompleteButtonTapped(sender: AnyObject) {
+        
         delegate?.taskCellIsCompleteButtonTapped(self)
     }
     
 }
 
+
 protocol TaskTableViewCellDelegate {
+    
     func taskCellIsCompleteButtonTapped(sender: TaskTableViewCell)
 }
 
+
 extension TaskTableViewCell {
+    
     func updateWith(task: Task) {
+        
         taskLabel.text = task.text
         taskLabel.font = UIFont(name: "Aller-Regular", size: 16)
         updateIsCompleteButton(task.isComplete.boolValue)

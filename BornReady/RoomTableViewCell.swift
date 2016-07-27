@@ -27,6 +27,7 @@ class RoomTableViewCell: UITableViewCell {
     var room: Room?
     
     func changeSizeOfProgressBar() {
+        
         progressBar.transform = CGAffineTransformMakeScale(1, 3)
     }
     
@@ -43,6 +44,7 @@ class RoomTableViewCell: UITableViewCell {
     func changeColorOfProgressBar(room: Room) {
         
         switch room.name {
+            
         case kKitchen:
             progressBar.progressTintColor = UIColor(red: 255/255, green: 221/255, blue: 93/255, alpha: 1.0)
         case kLiving:

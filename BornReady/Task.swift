@@ -19,6 +19,7 @@ class Task: NSManagedObject {
     
     
     convenience init?(dictionary: [String:AnyObject], context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
+        
         guard let entity = NSEntityDescription.entityForName(Task.kType, inManagedObjectContext: context),
             text = dictionary[Task.kText] as? String,
             section = dictionary[Task.kSection] as? String,
