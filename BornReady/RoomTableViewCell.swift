@@ -38,7 +38,7 @@ class RoomTableViewCell: UITableViewCell {
     }
     
     func changeSizeOfProgressBar() {
-        progressBar.transform = CGAffineTransformMakeScale(1, 2)
+        progressBar.transform = CGAffineTransformMakeScale(1, 3)
     }
     
     func setProgress(room: Room) {
@@ -53,21 +53,21 @@ class RoomTableViewCell: UITableViewCell {
     func changeColorOfProgressBar(room: Room) {
         switch room.name {
         case kKitchen:
-            progressBar.progressTintColor = UIColor(red: 255/255, green: 230/255, blue: 153/255, alpha: 1.0)
+            progressBar.progressTintColor = UIColor(red: 1.000, green: 0.847, blue: 0.400, alpha: 1.00)
         case kLiving:
-            progressBar.progressTintColor = UIColor(red: 222/255, green: 179/255, blue: 162/255, alpha: 1.0)
+            progressBar.progressTintColor = UIColor(red: 0.757, green: 0.463, blue: 0.357, alpha: 1.00)
         case kNursery:
-            progressBar.progressTintColor = UIColor(red: 188/255, green: 217/255, blue: 218/255, alpha: 1.0)
+            progressBar.progressTintColor = UIColor(red: 0.365, green: 0.627, blue: 0.635, alpha: 1.00)
         case kGarage:
-            progressBar.progressTintColor = UIColor(red: 253/255, green: 169/255, blue: 123/255, alpha: 1.0)
+            progressBar.progressTintColor = UIColor(red: 0.929, green: 0.478, blue: 0.302, alpha: 1.00)
         case kBathroom:
-            progressBar.progressTintColor = UIColor(red: 230/255, green: 192/255, blue: 206/255, alpha: 1.0)
+            progressBar.progressTintColor = UIColor(red: 0.812, green: 0.533, blue: 0.631, alpha: 1.00)
         case kOutdoors:
-            progressBar.progressTintColor = UIColor(red: 147/255, green: 241/255, blue: 169/255, alpha: 1.0)
+            progressBar.progressTintColor = UIColor(red: 0.337, green: 0.800, blue: 0.439, alpha: 1.00)
         case kLaundry:
-            progressBar.progressTintColor = UIColor(red: 127/255, green: 213/255, blue: 215/255, alpha: 1.0)
+            progressBar.progressTintColor = UIColor(red: 0.204, green: 0.686, blue: 0.702, alpha: 1.00)
         case kGeneral:
-            progressBar.progressTintColor = UIColor(red: 255/255, green: 191/255, blue: 155/255, alpha: 1.0)
+            progressBar.progressTintColor = UIColor(red: 1.000, green: 0.522, blue: 0.286, alpha: 1.00)
         default:
             break
         }
