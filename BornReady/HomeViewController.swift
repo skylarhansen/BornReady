@@ -49,6 +49,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         if let cell = tableView.dequeueReusableCellWithIdentifier("roomCell") as? RoomTableViewCell {
             let room = TaskController.sharedController.rooms[indexPath.row]
             cell.updateWith(room)
+            cell.changeSizeOfProgressBar()
             cell.roomLabel.textColor = UIColor(red: 89/255, green: 89/255, blue: 89/255, alpha: 1.0)
             cell.progressLabel.textColor = UIColor(red: 89/255, green: 89/255, blue: 89/255, alpha: 1.0)
             return cell
