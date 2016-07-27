@@ -33,12 +33,22 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CC5-KI-gpV">
                                                     <rect key="frame" x="8" y="8" width="584" height="44"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e6C-Oe-7e9">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSy-cL-yUV">
                                                             <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                                            <subviews>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e6C-Oe-7e9">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                                                </imageView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" secondItem="e6C-Oe-7e9" secondAttribute="height" multiplier="1:1" id="DLc-8n-CDw"/>
+                                                                <constraint firstAttribute="trailing" secondItem="e6C-Oe-7e9" secondAttribute="trailing" id="3nm-qx-PFy"/>
+                                                                <constraint firstAttribute="width" constant="44" id="G2N-Qh-TkH"/>
+                                                                <constraint firstItem="e6C-Oe-7e9" firstAttribute="leading" secondItem="qSy-cL-yUV" secondAttribute="leading" id="Iqy-kh-y37"/>
+                                                                <constraint firstItem="e6C-Oe-7e9" firstAttribute="top" secondItem="qSy-cL-yUV" secondAttribute="top" id="QGY-ah-wRt"/>
+                                                                <constraint firstAttribute="bottom" secondItem="e6C-Oe-7e9" secondAttribute="bottom" id="Y1Z-JO-JSl"/>
                                                             </constraints>
-                                                        </imageView>
+                                                        </view>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="k7d-fG-gMs">
                                                             <rect key="frame" x="54" y="0.0" width="519" height="44"/>
                                                             <subviews>

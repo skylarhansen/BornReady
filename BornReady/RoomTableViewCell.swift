@@ -52,21 +52,21 @@ class RoomTableViewCell: UITableViewCell {
         
         switch room.name {
         case kKitchen:
-            progressBar.progressTintColor = UIColor(red: 1.000, green: 0.847, blue: 0.400, alpha: 1.00)
+            progressBar.progressTintColor = UIColor(red: 255/255, green: 221/255, blue: 93/255, alpha: 1.0)
         case kLiving:
-            progressBar.progressTintColor = UIColor(red: 0.757, green: 0.463, blue: 0.357, alpha: 1.00)
+            progressBar.progressTintColor = UIColor(red: 200/255, green: 130/255, blue: 102/255, alpha: 1.0)
         case kNursery:
-            progressBar.progressTintColor = UIColor(red: 0.365, green: 0.627, blue: 0.635, alpha: 1.00)
+            progressBar.progressTintColor = UIColor(red: 104/255, green: 170/255, blue: 172/255, alpha: 1.0)
         case kGarage:
-            progressBar.progressTintColor = UIColor(red: 0.929, green: 0.478, blue: 0.302, alpha: 1.00)
+            progressBar.progressTintColor = UIColor(red: 239/255, green: 134/255, blue: 87/255, alpha: 1.0)
         case kBathroom:
-            progressBar.progressTintColor = UIColor(red: 0.812, green: 0.533, blue: 0.631, alpha: 1.00)
+            progressBar.progressTintColor = UIColor(red: 213/255, green: 147/255, blue: 171/255, alpha: 1.0)
         case kOutdoors:
-            progressBar.progressTintColor = UIColor(red: 0.337, green: 0.800, blue: 0.439, alpha: 1.00)
+            progressBar.progressTintColor = UIColor(red: 96/255, green: 210/255, blue: 123/255, alpha: 1.0)
         case kLaundry:
-            progressBar.progressTintColor = UIColor(red: 0.204, green: 0.686, blue: 0.702, alpha: 1.00)
+            progressBar.progressTintColor = UIColor(red: 59/255, green: 184/255, blue: 187/255, alpha: 1.0)
         case kGeneral:
-            progressBar.progressTintColor = UIColor(red: 1.000, green: 0.522, blue: 0.286, alpha: 1.00)
+            progressBar.progressTintColor = UIColor(red: 255/255, green: 144/255, blue: 83/255, alpha: 1.0)
         default:
             break
         }
@@ -76,13 +76,13 @@ class RoomTableViewCell: UITableViewCell {
         
         roomImageView.image = UIImage(named: room.imageString)
         roomLabel.text = room.name
-        roomLabel.font = UIFont(name: "Aller-Regular", size: 20)
+        roomLabel.font = UIFont(name: "Aller-Regular", size: 18)
         
         let tasksCompleted = TaskController.sharedController.completedTasks(room)
         guard let tasks = room.tasks else { return }
         
         progressLabel.text = "\(tasksCompleted.count)/\(tasks.count)"
-        progressLabel.font = UIFont(name: "Aller-Regular", size: 16)
+        progressLabel.font = UIFont(name: "Aller-Regular", size: 14)
         changeColorOfProgressBar(room)
         setProgressOfCompletedTasks(room)
     }

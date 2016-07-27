@@ -61,9 +61,9 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         switch room.name {
         case kKitchen:
-            self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green: 216/255, blue: 93/255, alpha: 1.0)
-            taskListTableView.separatorColor = UIColor(red: 255/255, green: 216/255, blue: 93/255, alpha: 1.0)
-            taskListTableView.backgroundColor = UIColor(red: 255/255, green: 216/255, blue: 93/255, alpha: 1.0)
+            self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green: 221/255, blue: 93/255, alpha: 1.0)
+            taskListTableView.separatorColor = UIColor(red: 255/255, green: 221/255, blue: 93/255, alpha: 1.0)
+            taskListTableView.backgroundColor = UIColor(red: 255/255, green: 221/255, blue: 93/255, alpha: 1.0)
         case kLiving:
             self.navigationController?.navigationBar.barTintColor = UIColor(red: 200/255, green: 130/255, blue: 102/255, alpha: 1.0)
             taskListTableView.separatorColor = UIColor(red: 200/255, green: 130/255, blue: 102/255, alpha: 1.0)
@@ -167,7 +167,7 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         switch room.name {
         case kKitchen:
-            view.tintColor = UIColor(red: 255/255, green: 216/255, blue: 93/255, alpha: 1.0)
+            view.tintColor = UIColor(red: 255/255, green: 221/255, blue: 93/255, alpha: 1.0)
         case kLiving:
             view.tintColor = UIColor(red: 200/255, green: 130/255, blue: 102/255, alpha: 1.0)
         case kNursery:

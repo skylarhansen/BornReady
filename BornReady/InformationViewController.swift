@@ -59,8 +59,8 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
             isCompleteButton.backgroundColor = UIColor(red: 255/255, green: 230/255, blue: 153/255, alpha: 1.0)
             lineView.backgroundColor = UIColor(red: 255/255, green: 230/255, blue: 153/255, alpha: 1.0)
             taskView.backgroundColor = UIColor(red: 255/255, green: 230/255, blue: 153/255, alpha: 1.0)
-            sectionLabel.backgroundColor = UIColor(red: 255/255, green: 216/255, blue: 93/255, alpha: 1.0)
-            sectionView.backgroundColor = UIColor(red: 255/255, green: 216/255, blue: 93/255, alpha: 1.0)
+            sectionLabel.backgroundColor = UIColor(red: 255/255, green: 221/255, blue: 93/255, alpha: 1.0)
+            sectionView.backgroundColor = UIColor(red: 255/255, green: 221/255, blue: 93/255, alpha: 1.0)
         case kLiving:
             view.backgroundColor = UIColor(red: 222/255, green: 179/255, blue: 162/255, alpha: 1.0)
             taskLabel.backgroundColor = UIColor(red: 222/255, green: 179/255, blue: 162/255, alpha: 1.0)
