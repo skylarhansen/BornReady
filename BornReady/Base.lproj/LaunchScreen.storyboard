@@ -17,6 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="crE-TR-fOk">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreenBack" translatesAutoresizingMaskIntoConstraints="NO" id="CJI-NP-Oiq">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="CJI-NP-Oiq" firstAttribute="top" secondItem="crE-TR-fOk" secondAttribute="top" id="76Y-SK-PiV"/>
+                                    <constraint firstItem="CJI-NP-Oiq" firstAttribute="leading" secondItem="crE-TR-fOk" secondAttribute="leading" id="VBV-Ts-XCW"/>
+                                    <constraint firstAttribute="trailing" secondItem="CJI-NP-Oiq" secondAttribute="trailing" id="VWZ-Fj-TEj"/>
+                                    <constraint firstAttribute="bottom" secondItem="CJI-NP-Oiq" secondAttribute="bottom" id="dzB-VZ-ItT"/>
+                                </constraints>
+                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="imy-UI-nd5">
                                 <rect key="frame" x="7" y="269" width="586" height="62"/>
                                 <constraints>
@@ -25,10 +40,13 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.8666666666666667" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="crE-TR-fOk" secondAttribute="trailing" id="2NR-BU-tUm"/>
                             <constraint firstItem="imy-UI-nd5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="LmM-0u-j7i"/>
                             <constraint firstItem="imy-UI-nd5" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="UvX-xg-urg"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="crE-TR-fOk" secondAttribute="bottom" id="V3U-lm-YB1"/>
+                            <constraint firstItem="crE-TR-fOk" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="l1W-8Y-wdU"/>
+                            <constraint firstItem="crE-TR-fOk" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="rFw-AS-4c3"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,6 +56,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="launchScreenBack" width="320" height="568"/>
         <image name="logo" width="293" height="31"/>
     </resources>
 </document>
