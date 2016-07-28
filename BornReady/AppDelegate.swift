@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        NSThread.sleepForTimeInterval(1.0)
+        NSThread.sleepForTimeInterval(0.5)
         return true
     }
 
