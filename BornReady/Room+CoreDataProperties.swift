@@ -17,5 +17,6 @@ extension Room {
     @NSManaged var imageString: String
     @NSManaged var name: String
     @NSManaged var tasks: NSOrderedSet?
-
+    
 }
+
