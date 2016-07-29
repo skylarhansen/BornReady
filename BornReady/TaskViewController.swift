@@ -157,7 +157,7 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
         return 35
     }
     
-
+    
     // MARK: - TaskTableViewCellDelegate function
     
     func taskCellIsCompleteButtonTapped(sender: TaskTableViewCell) {
