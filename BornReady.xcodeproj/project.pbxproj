@@ -290,13 +290,16 @@
 					8CB1C5A11D3059A7006EE550 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = V9YMV3Q9VL;
+						LastSwiftMigration = 0800;
 					};
 					8CB1C5B51D3059A7006EE550 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 8CB1C5A11D3059A7006EE550;
 					};
 					8CB1C5C01D3059A7006EE550 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 8CB1C5A11D3059A7006EE550;
 					};
 				};
@@ -526,6 +529,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.skylarhansen.BornReady;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -540,6 +544,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.skylarhansen.BornReady;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -551,6 +556,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skylarhansen.BornReadyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BornReady.app/BornReady";
 			};
 			name = Debug;
@@ -563,6 +569,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skylarhansen.BornReadyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BornReady.app/BornReady";
 			};
 			name = Release;
@@ -574,6 +581,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skylarhansen.BornReadyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = BornReady;
 			};
 			name = Debug;
@@ -585,6 +593,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.skylarhansen.BornReadyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = BornReady;
 			};
 			name = Release;

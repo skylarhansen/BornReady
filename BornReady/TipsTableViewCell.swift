@@ -12,7 +12,7 @@ class TipsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var tipLabel: UILabel!
     
-    func updateWith(tip: Tip) {
+    func updateWith(_ tip: Tip) {
         
         tipLabel.text = tip.text
         tipLabel.font = UIFont(name: "Aller-Regular", size: 16)

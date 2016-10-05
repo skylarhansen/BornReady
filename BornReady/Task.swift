@@ -13,19 +13,19 @@ import CoreData
 class Task: NSManagedObject {
     
     static let kType = "Task"
-    private static let kText = "text"
-    private static let kSection = "section"
-    private static let kLink = "link"
+    fileprivate static let kText = "text"
+    fileprivate static let kSection = "section"
+    fileprivate static let kLink = "link"
     
     
     convenience init?(dictionary: [String:AnyObject], context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
         
-        guard let entity = NSEntityDescription.entityForName(Task.kType, inManagedObjectContext: context),
-            text = dictionary[Task.kText] as? String,
-            section = dictionary[Task.kSection] as? String,
-            link = dictionary[Task.kLink] as? String else { fatalError("Error: Core Data failed to create entity from entity description.") }
+        guard let entity = NSEntityDescription.entity(forEntityName: Task.kType, in: context),
+            let text = dictionary[Task.kText] as? String,
+            let section = dictionary[Task.kSection] as? String,
+            let link = dictionary[Task.kLink] as? String else { fatalError("Error: Core Data failed to create entity from entity description.") }
         
-        self.init(entity: entity, insertIntoManagedObjectContext: context)
+        self.init(entity: entity, insertInto: context)
         
         self.text = text
         self.isComplete = false

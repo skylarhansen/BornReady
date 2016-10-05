@@ -12,17 +12,17 @@ import CoreData
 class Room: NSManagedObject {
     
     static let kType = "Room"
-    private static let kName = "name"
-    private static let kImage = "image"
+    fileprivate static let kName = "name"
+    fileprivate static let kImage = "image"
     
     
     convenience init?(dictionary: [String:AnyObject], context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext) {
         
-        guard let entity = NSEntityDescription.entityForName(Room.kType, inManagedObjectContext: context),
-            name = dictionary[Room.kName] as? String,
-            image = dictionary[Room.kImage] as? String  else { fatalError("Error: Core Data failed to create entity from entity description.") }
+        guard let entity = NSEntityDescription.entity(forEntityName: Room.kType, in: context),
+            let name = dictionary[Room.kName] as? String,
+            let image = dictionary[Room.kImage] as? String  else { fatalError("Error: Core Data failed to create entity from entity description.") }
         
-        self.init(entity: entity, insertIntoManagedObjectContext: context)
+        self.init(entity: entity, insertInto: context)
         
         self.name = name
         self.imageString = image

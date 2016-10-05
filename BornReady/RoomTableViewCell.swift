@@ -10,14 +10,14 @@ import UIKit
 
 class RoomTableViewCell: UITableViewCell {
     
-    private let kKitchen = "Kitchen"
-    private let kLiving = "Living Room"
-    private let kNursery = "Nursery & Bedroom"
-    private let kGarage = "Garage"
-    private let kBathroom = "Bathroom"
-    private let kOutdoors = "Outdoors"
-    private let kLaundry = "Laundry Room"
-    private let kGeneral = "General"
+    fileprivate let kKitchen = "Kitchen"
+    fileprivate let kLiving = "Living Room"
+    fileprivate let kNursery = "Nursery & Bedroom"
+    fileprivate let kGarage = "Garage"
+    fileprivate let kBathroom = "Bathroom"
+    fileprivate let kOutdoors = "Outdoors"
+    fileprivate let kLaundry = "Laundry Room"
+    fileprivate let kGeneral = "General"
     
     @IBOutlet weak var roomImageView: UIImageView!
     @IBOutlet weak var roomLabel: UILabel!
@@ -28,10 +28,10 @@ class RoomTableViewCell: UITableViewCell {
     
     func changeSizeOfProgressBar() {
         
-        progressBar.transform = CGAffineTransformMakeScale(1, 3)
+        progressBar.transform = CGAffineTransform(scaleX: 1, y: 3)
     }
     
-    func setProgressOfCompletedTasks(room: Room) {
+    func setProgressOfCompletedTasks(_ room: Room) {
         
         guard let tasks = room.tasks else { return }
         let completedTasksFloatValue = Float(TaskController.sharedController.completedTasks(room).count)
@@ -41,7 +41,7 @@ class RoomTableViewCell: UITableViewCell {
         progressBar.setProgress(fractionalProgress, animated: false)
     }
     
-    func changeColorOfProgressBar(room: Room) {
+    func changeColorOfProgressBar(_ room: Room) {
         
         switch room.name {
             
@@ -66,7 +66,7 @@ class RoomTableViewCell: UITableViewCell {
         }
     }
     
-    func updateWith(room: Room) {
+    func updateWith(_ room: Room) {
         
         roomImageView.image = UIImage(named: room.imageString)
         roomLabel.text = room.name

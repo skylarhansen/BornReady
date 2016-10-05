@@ -15,18 +15,18 @@ class TaskTableViewCell: UITableViewCell {
     
     var delegate: TaskTableViewCellDelegate?
     
-    func updateIsCompleteButton(isComplete: Bool) {
+    func updateIsCompleteButton(_ isComplete: Bool) {
         
         if isComplete {
-            isCompleteButton.setImage(UIImage(named: "complete"), forState: .Normal)
+            isCompleteButton.setImage(UIImage(named: "complete"), for: UIControlState())
         } else {
-            isCompleteButton.setImage(UIImage(named: "incomplete"), forState: .Normal)
+            isCompleteButton.setImage(UIImage(named: "incomplete"), for: UIControlState())
         }
     }
     
     // MARK: - Action buttons
     
-    @IBAction func isCompleteButtonTapped(sender: AnyObject) {
+    @IBAction func isCompleteButtonTapped(_ sender: AnyObject) {
         
         delegate?.taskCellIsCompleteButtonTapped(self)
     }
@@ -36,13 +36,13 @@ class TaskTableViewCell: UITableViewCell {
 
 protocol TaskTableViewCellDelegate {
     
-    func taskCellIsCompleteButtonTapped(sender: TaskTableViewCell)
+    func taskCellIsCompleteButtonTapped(_ sender: TaskTableViewCell)
 }
 
 
 extension TaskTableViewCell {
     
-    func updateWith(task: Task) {
+    func updateWith(_ task: Task) {
         
         taskLabel.text = task.text
         taskLabel.font = UIFont(name: "Aller-Regular", size: 16)

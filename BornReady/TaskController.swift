@@ -19,17 +19,17 @@ class TaskController {
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
-        return sortRooms((try? Stack.sharedStack.managedObjectContext.executeFetchRequest(fetchRequest)) as? [Room] ?? [])
+        return sortRooms((try? Stack.sharedStack.managedObjectContext.fetch(fetchRequest)) as? [Room] ?? [])
     }
     
     var tasks: [Task] {
         
         let fetchRequest = NSFetchRequest(entityName: "Task")
         
-        return (try? Stack.sharedStack.managedObjectContext.executeFetchRequest(fetchRequest)) as? [Task] ?? []
+        return (try? Stack.sharedStack.managedObjectContext.fetch(fetchRequest)) as? [Task] ?? []
     }
     
-    func completedTasks(room: Room) -> [Task] {
+    func completedTasks(_ room: Room) -> [Task] {
         
         let tasks = room.tasks ?? []
         var tasksInRoom: [Task] = []
@@ -45,28 +45,28 @@ class TaskController {
         return completedTasksInRoom
     }
     
-    func sortRooms(rooms: [Room]) -> [Room] {
+    func sortRooms(_ rooms: [Room]) -> [Room] {
         
         var roomArray: [Room] = []
         
         for room in rooms {
             switch room.name {
             case "Bathroom":
-                roomArray.insert(room, atIndex: 0)
+                roomArray.insert(room, at: 0)
             case "Garage":
-                roomArray.insert(room, atIndex: 0)
+                roomArray.insert(room, at: 0)
             case "General":
-                roomArray.insert(room, atIndex: 2)
+                roomArray.insert(room, at: 2)
             case "Kitchen":
-                roomArray.insert(room, atIndex: 0)
+                roomArray.insert(room, at: 0)
             case "Laundry Room":
-                roomArray.insert(room, atIndex: 3)
+                roomArray.insert(room, at: 3)
             case "Living Room":
-                roomArray.insert(room, atIndex: 1)
+                roomArray.insert(room, at: 1)
             case "Nursery & Bedroom":
-                roomArray.insert(room, atIndex: 2)
+                roomArray.insert(room, at: 2)
             case "Outdoors":
-                roomArray.insert(room, atIndex: 5)
+                roomArray.insert(room, at: 5)
             default:
                 break
             }
@@ -74,23 +74,23 @@ class TaskController {
         return roomArray
     }
     
-    func serializeJSON(completion: (rooms: [Room]) -> Void) {
+    func serializeJSON(_ completion: (_ rooms: [Room]) -> Void) {
         
-        let filePath = NSBundle.mainBundle().pathForResource("BornReady", ofType: "json")!
+        let filePath = Bundle.main.path(forResource: "BornReady", ofType: "json")!
         
-        guard let data = NSData(contentsOfFile: filePath),
-            serializedData = try? NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments),
-            jsonDictionary = serializedData as? [String:AnyObject],
-            bornReadyDictionary = jsonDictionary["born-ready"],
-            roomsArray = bornReadyDictionary["rooms"] as? [[String:AnyObject]] else { return }
+        guard let data = try? Data(contentsOf: URL(fileURLWithPath: filePath)),
+            let serializedData = try? JSONSerialization.jsonObject(with: data, options: .allowFragments),
+            let jsonDictionary = serializedData as? [String:AnyObject],
+            let bornReadyDictionary = jsonDictionary["born-ready"],
+            let roomsArray = bornReadyDictionary["rooms"] as? [[String:AnyObject]] else { return }
         
         let rooms = roomsArray.flatMap { Room(dictionary: $0) }
-        completion(rooms: rooms)
+        completion(rooms)
     }
     
-    func isCompleteValueToggled(task: Task) {
+    func isCompleteValueToggled(_ task: Task) {
         
-        task.isComplete = !task.isComplete.boolValue
+        task.isComplete = !task.isComplete.boolValue as NSNumber
         
         saveContext()
     }
@@ -105,7 +105,7 @@ class TaskController {
         }
     }
     
-    static func makeSections(tasks: [Task]) -> [[Task]] {
+    static func makeSections(_ tasks: [Task]) -> [[Task]] {
         
         var sectionNames: [String] = []
         var sections: [[Task]] = []

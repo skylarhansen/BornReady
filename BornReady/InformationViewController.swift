@@ -10,14 +10,14 @@ import UIKit
 
 class InformationViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    private let kKitchen = "Kitchen"
-    private let kLiving = "Living Room"
-    private let kNursery = "Nursery & Bedroom"
-    private let kGarage = "Garage"
-    private let kBathroom = "Bathroom"
-    private let kOutdoors = "Outdoors"
-    private let kLaundry = "Laundry Room"
-    private let kGeneral = "General"
+    fileprivate let kKitchen = "Kitchen"
+    fileprivate let kLiving = "Living Room"
+    fileprivate let kNursery = "Nursery & Bedroom"
+    fileprivate let kGarage = "Garage"
+    fileprivate let kBathroom = "Bathroom"
+    fileprivate let kOutdoors = "Outdoors"
+    fileprivate let kLaundry = "Laundry Room"
+    fileprivate let kGeneral = "General"
     
     @IBOutlet weak var sectionLabel: UILabel!
     @IBOutlet weak var taskLabel: UILabel!
@@ -45,28 +45,28 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
         tipsTableView.estimatedRowHeight = 100
         tipsTableView.rowHeight = UITableViewAutomaticDimension
         
-        shareButton.backgroundColor = UIColor.whiteColor()
-        shoppingButton.backgroundColor = UIColor.whiteColor()
+        shareButton.backgroundColor = UIColor.white
+        shoppingButton.backgroundColor = UIColor.white
     }
     
     
     // MARK: - UITableViewDataSource Functions
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         guard let task = task,
-            tips = task.tips else { return 0 }
+            let tips = task.tips else { return 0 }
         
         return tips.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("tipCell", forIndexPath: indexPath) as? TipsTableViewCell ?? TipsTableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tipCell", for: indexPath) as? TipsTableViewCell ?? TipsTableViewCell()
         
         guard let task = task,
-            tips = task.tips,
-            let tip = tips[indexPath.row] as? Tip else { return UITableViewCell() }
+            let tips = task.tips,
+            let tip = tips[(indexPath as NSIndexPath).row] as? Tip else { return UITableViewCell() }
         
         cell.updateWith(tip)
         
@@ -154,7 +154,7 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
     
     func setUpLabelOutlets() {
         
-        sectionLabel.text = task?.section.uppercaseString
+        sectionLabel.text = task?.section.uppercased()
         sectionLabel.font = UIFont(name: "Aller-Regular", size: 18)
         sectionLabel.textColor = UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1.0)
         
@@ -168,9 +168,9 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
     func setUpIsCompleteButtonImage() {
         
         if task?.isComplete.boolValue == true {
-            isCompleteButton.setImage(UIImage(named: "complete"), forState: .Normal)
+            isCompleteButton.setImage(UIImage(named: "complete"), for: UIControlState())
         } else {
-            isCompleteButton.setImage(UIImage(named: "incomplete"), forState: .Normal)
+            isCompleteButton.setImage(UIImage(named: "incomplete"), for: UIControlState())
         }
     }
     
@@ -179,8 +179,8 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
         guard let taskLink = task?.link else { return }
         
         if taskLink == "" {
-            shoppingButton.enabled = false
-            shoppingButton.setImage(UIImage(named: "shoppingButtonInactive"), forState: .Normal)
+            shoppingButton.isEnabled = false
+            shoppingButton.setImage(UIImage(named: "shoppingButtonInactive"), for: UIControlState())
         }
     }
     
@@ -191,13 +191,13 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
         let string = "Check out this baby-proofing tip:\n\"\(task)\""
         let activityViewController = UIActivityViewController(activityItems: [string], applicationActivities: nil)
         
-        presentViewController(activityViewController, animated: true, completion: nil)
+        present(activityViewController, animated: true, completion: nil)
     }
     
     
     // MARK: - Action Button
     
-    @IBAction func isCompleteButtonTapped(sender: AnyObject) {
+    @IBAction func isCompleteButtonTapped(_ sender: AnyObject) {
         
         guard let task = task else { return }
         
@@ -207,15 +207,15 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
     
-    @IBAction func shareButtonTapped(sender: AnyObject) {
+    @IBAction func shareButtonTapped(_ sender: AnyObject) {
         
         presentActivityViewController()
     }
     
-    @IBAction func shoppingButtonTapped(sender: AnyObject) {
+    @IBAction func shoppingButtonTapped(_ sender: AnyObject) {
         
         guard let task = task else  { return }
         
-        UIApplication.sharedApplication().openURL(NSURL(string: task.link) ?? NSURL())
+        UIApplication.shared.openURL(URL(string: task.link) ?? URL())
     }
 }

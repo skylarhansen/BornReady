@@ -20,23 +20,23 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         super.viewDidLoad()
         
-        let firstRun = NSUserDefaults.standardUserDefaults().boolForKey("firstRun") as Bool
+        let firstRun = UserDefaults.standard.bool(forKey: "firstRun") as Bool
         if !firstRun {
             TaskController.sharedController.serializeJSON({ (rooms) in
                 TaskController.sharedController.saveContext()
             })
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "firstRun")
+            UserDefaults.standard.set(true, forKey: "firstRun")
         }
         
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
-        self.navigationController?.navigationBar.translucent = false
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.init(red: 67/255, green: 67/255, blue: 67/255, alpha: 1.0), NSFontAttributeName: UIFont(name: "Aller-Regular", size: 20)!]
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1.0)
         self.navigationController?.navigationBar.tintColor = UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1.0)
         
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 248/255, green: 248/255, blue: 248/255, alpha: 1.0)
         roomListTableView.reloadData()
@@ -45,15 +45,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // MARK: - UITableViewDataSource Functions
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return TaskController.sharedController.rooms.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("roomCell") as? RoomTableViewCell ?? RoomTableViewCell()
-        let room = TaskController.sharedController.rooms[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "roomCell") as? RoomTableViewCell ?? RoomTableViewCell()
+        let room = TaskController.sharedController.rooms[(indexPath as NSIndexPath).row]
         
         cell.updateWith(room)
         cell.changeSizeOfProgressBar()
@@ -67,7 +67,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // MARK: - UITableViewDelegate Functions
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         return 80
     }
@@ -75,12 +75,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // MARK: - Navigation
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "toTaskList",
             let indexPath = roomListTableView.indexPathForSelectedRow {
-            let taskVC = segue.destinationViewController as? TaskViewController
-            let room = TaskController.sharedController.rooms[indexPath.row]
+            let taskVC = segue.destination as? TaskViewController
+            let room = TaskController.sharedController.rooms[(indexPath as NSIndexPath).row]
             taskVC?.room = room
         }
     }

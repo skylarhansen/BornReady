@@ -10,14 +10,14 @@ import UIKit
 
 class TaskViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, TaskTableViewCellDelegate {
     
-    private let kKitchen = "Kitchen"
-    private let kLiving = "Living Room"
-    private let kNursery = "Nursery & Bedroom"
-    private let kGarage = "Garage"
-    private let kBathroom = "Bathroom"
-    private let kOutdoors = "Outdoors"
-    private let kLaundry = "Laundry Room"
-    private let kGeneral = "General"
+    fileprivate let kKitchen = "Kitchen"
+    fileprivate let kLiving = "Living Room"
+    fileprivate let kNursery = "Nursery & Bedroom"
+    fileprivate let kGarage = "Garage"
+    fileprivate let kBathroom = "Bathroom"
+    fileprivate let kOutdoors = "Outdoors"
+    fileprivate let kLaundry = "Laundry Room"
+    fileprivate let kGeneral = "General"
     
     @IBOutlet weak var taskListTableView: UITableView!
     
@@ -49,11 +49,11 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
         taskListTableView.estimatedRowHeight = 100
         taskListTableView.rowHeight = UITableViewAutomaticDimension
         
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
-        self.navigationItem.title = room?.name.uppercaseString
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.navigationItem.title = room?.name.uppercased()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
         
@@ -65,20 +65,20 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // MARK: - UITableViewDataSource Functions
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         
         return sections.count
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return sections[section].count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("taskCell") as? TaskTableViewCell ?? TaskTableViewCell()
-        let task = sections[indexPath.section][indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell") as? TaskTableViewCell ?? TaskTableViewCell()
+        let task = sections[(indexPath as NSIndexPath).section][(indexPath as NSIndexPath).row]
         let name = room?.name
         
         cell.updateWith(task)
@@ -108,9 +108,9 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        if let sectionName = sections[section].first?.section.uppercaseString {
+        if let sectionName = sections[section].first?.section.uppercased() {
             return sectionName
         } else {
             return nil
@@ -120,7 +120,7 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // MARK: - UITableViewDelegate Functions
     
-    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         
         guard let room = room else { return }
         
@@ -152,7 +152,7 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
         return 35
     }
@@ -160,25 +160,25 @@ class TaskViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     // MARK: - TaskTableViewCellDelegate function
     
-    func taskCellIsCompleteButtonTapped(sender: TaskTableViewCell) {
+    func taskCellIsCompleteButtonTapped(_ sender: TaskTableViewCell) {
         
-        guard let indexPath = taskListTableView.indexPathForCell(sender) else { return }
-        let task = sections[indexPath.section][indexPath.row]
+        guard let indexPath = taskListTableView.indexPath(for: sender) else { return }
+        let task = sections[(indexPath as NSIndexPath).section][(indexPath as NSIndexPath).row]
         
         TaskController.sharedController.isCompleteValueToggled(task)
         
-        taskListTableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
+        taskListTableView.reloadRows(at: [indexPath], with: .automatic)
     }
     
     
     // MARK: - Navigation
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "toTaskInfo",
             let indexPath = taskListTableView.indexPathForSelectedRow {
-            let infoVC = segue.destinationViewController as? InformationViewController
-            let task = sections[indexPath.section][indexPath.row]
+            let infoVC = segue.destination as? InformationViewController
+            let task = sections[(indexPath as NSIndexPath).section][(indexPath as NSIndexPath).row]
             infoVC?.task = task
         }
     }
