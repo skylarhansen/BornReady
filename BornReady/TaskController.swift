@@ -15,7 +15,7 @@ class TaskController {
     
     var rooms: [Room] {
         
-        let fetchRequest = NSFetchRequest(entityName: "Room")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Room")
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
@@ -24,7 +24,7 @@ class TaskController {
     
     var tasks: [Task] {
         
-        let fetchRequest = NSFetchRequest(entityName: "Task")
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Task")
         
         return (try? Stack.sharedStack.managedObjectContext.fetch(fetchRequest)) as? [Task] ?? []
     }

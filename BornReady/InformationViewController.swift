@@ -214,8 +214,9 @@ class InformationViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBAction func shoppingButtonTapped(_ sender: AnyObject) {
         
-        guard let task = task else  { return }
+        guard let task = task,
+            let url = URL(string: task.link) else { return }
         
-        UIApplication.shared.openURL(URL(string: task.link) ?? URL())
+        UIApplication.shared.openURL(url)
     }
 }
