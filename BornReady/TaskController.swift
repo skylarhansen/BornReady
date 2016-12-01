@@ -31,6 +31,7 @@ class TaskController {
     
     func completedTasks(_ room: Room) -> [Task] {
         
+        
         let tasks = room.tasks ?? []
         var tasksInRoom: [Task] = []
         
